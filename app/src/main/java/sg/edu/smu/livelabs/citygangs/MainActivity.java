@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Method to start the activity
-    public void startService(View view) {
+    public void startActivity(View view) {
         startActivity(new Intent(getBaseContext(), MapsActivity.class));
     }
 

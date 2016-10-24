@@ -1,5 +1,6 @@
 package sg.edu.smu.livelabs.citygangs;
 
+import android.graphics.Color;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -9,6 +10,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polygon;
+import com.google.android.gms.maps.model.PolygonOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -37,10 +40,34 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        //Polygon is what we use to define the areas
+        Polygon polygon = mMap.addPolygon(new PolygonOptions()
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+
+                .add(new LatLng(1.2896700, 103.8500700),
+                        new LatLng(1.2896700, 103.8600700),
+                        new LatLng(1.2996700, 103.8500700),
+                        new LatLng(1.2896700, 103.8500700))
+                //notice the last one == the first one
+
+                //Stroke of the outside of the polygon
+                .strokeColor(Color.RED)
+
+                //color uses the ARGB format which is as follows:
+                //0xTTRRGGBB where TT is percentage of transparency, RR GG BB hexa values [00;ff]
+                .fillColor(0x40001010));
+
+
+        //Coordinates of Singapore in decimal degrees
+        LatLng singapore = new LatLng(1.2896700, 103.8500700);
+
+        //add a marker (the red thing)
+        mMap.addMarker(new MarkerOptions().position(singapore).title("Marker in Singapore"));
+
+        //move the camera to Singapore
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(singapore));
+
+        //The initial ZOOM of the map
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(singapore, 11));
     }
 }
