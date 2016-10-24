@@ -16,12 +16,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // Method to start the service
+    // Method to start the activity
     public void startService(View view) {
-        startService(new Intent(getBaseContext(), MyService.class));
+        startActivity(new Intent(getBaseContext(), MapsActivity.class));
     }
-    // Method to stop the service
-    public void stopService(View view) {
-        stopService(new Intent(getBaseContext(), MyService.class));
-    }
+
 }
