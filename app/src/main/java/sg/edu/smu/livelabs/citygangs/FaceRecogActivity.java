@@ -11,6 +11,7 @@ import android.widget.*;
 import android.provider.*;
 import com.microsoft.projectoxford.face.*;
 import com.microsoft.projectoxford.face.contract.*;
+import com.microsoft.projectoxford.face.rest.ClientException;
 
 
 import java.io.ByteArrayInputStream;
@@ -144,6 +145,10 @@ public class FaceRecogActivity extends Activity {
             }
         }
         return bitmap;
+    }
+
+    private void createPersonGroup() throws IOException, ClientException {
+        faceServiceClient.createPersonGroup("red", "Team red", "dunno");
     }
 
 }
