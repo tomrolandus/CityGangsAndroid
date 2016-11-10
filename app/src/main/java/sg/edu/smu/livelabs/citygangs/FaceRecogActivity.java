@@ -29,7 +29,7 @@ public class FaceRecogActivity extends Activity {
     private ProgressDialog detectionProgressDialog;
 
     private FaceServiceClient faceServiceClient =
-            new FaceServiceRestClient("f9b5143e921643e6a17be5d83a1b8796");
+            new FaceServiceRestClient(getString(R.string.face_licence));
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
