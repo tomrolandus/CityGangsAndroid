@@ -1,8 +1,11 @@
 package sg.edu.smu.livelabs.citygangs;
 
+//import android.content.pm.PackageManager;
 import android.graphics.Color;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -13,8 +16,24 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.OnMyLocationButtonClickListener;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
+
+public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLocationButtonClickListener, OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
+    private boolean mPermissionDenied = false;
     private GoogleMap mMap;
 
     @Override
@@ -39,6 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
+
         mMap = googleMap;
         //Polygon is what we use to define the areas
         Polygon polygon = mMap.addPolygon(new PolygonOptions()
@@ -64,10 +84,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         //add a marker (the red thing)
         mMap.addMarker(new MarkerOptions().position(singapore).title("Marker in Singapore"));
 
-        //move the camera to Singapore
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(singapore));
+//        //move the camera to Singapore
+//        mMap.moveCamera(CameraUpdateFactory.newLatLng(singapore));
+//
+//        //The initial ZOOM of the map
+//        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(singapore, 11));
 
-        //The initial ZOOM of the map
-        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(singapore, 11));
+        mMap.setOnMyLocationButtonClickListener(this);
+        enableMyLocation();
+
+
     }
+
+    @Override
+    public boolean onMyLocationButtonClick() {
+        return false;
+    }
+
+    private void enableMyLocation() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            // Permission to access the location is missing.
+            PermissionUtils.requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
+                    Manifest.permission.ACCESS_FINE_LOCATION, true);
+        } else if (mMap != null) {
+            // Access to the location has been granted to the app.
+            mMap.setMyLocationEnabled(true);
+        }
+    }
+
 }
