@@ -19,11 +19,21 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical" >
-        <Button android:id="@+id/btnStartActivity"
+        <Button android:id="@+id/btnStartMapsActivity"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/open_maps"
-            android:onClick="startActivity"/>
+            android:onClick="startMapsActivity"/>
+
+        <Button
+            android:id="@+id/btnStartFaceRecogActivity"
+            android:layout_width="277dp"
+            android:layout_height="wrap_content"
+            android:text="@string/open_face_recog"
+            android:onClick="startFaceRecogActivity"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="false"
+            android:nestedScrollingEnabled="false" />
         <!--<Button android:id="@+id/btnStopService"-->
             <!--android:layout_width="fill_parent"-->
             <!--android:layout_height="wrap_content"-->

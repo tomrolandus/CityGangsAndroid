@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+
 public class MainActivity extends AppCompatActivity {
 
     String msg = "Android : ";
@@ -16,9 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // Method to start the activity
-    public void startActivity(View view) {
+    // Method to start the maps activity
+    public void startMapsActivity(View view) {
         startActivity(new Intent(getBaseContext(), MapsActivity.class));
+    }
+
+    // Method to start the Face recognition activity
+    public void startFaceRecogActivity(View view) {
+        startActivity(new Intent(getBaseContext(), FaceRecogActivity.class));
     }
 
 }
