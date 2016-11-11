@@ -29,6 +29,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLocationButtonClickListener, OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
@@ -58,9 +59,10 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
+//Log.d("onMapReady","The map is ready");
         mMap = googleMap;
         MapResources tmp = new MapResources();
+        Log.d("onMapReady", "Amount of areas: " +tmp.getAreas().size());
         for(Area area : tmp.getAreas()){
             PolygonOptions tmpOptions = new PolygonOptions();
             for(LatLng latLng : area.getLatLngs()){
@@ -68,7 +70,7 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
             }
             tmpOptions.strokeColor(area.getStrokeColor());
             tmpOptions.fillColor(area.getFillColor());
-//            Polygon poly = mMap.addPolygon(tmpOptions);
+            Polygon poly = mMap.addPolygon(tmpOptions);
 //            poly.setClickable(true);
 //            mMap.setOnPolygonClickListener(GoogleMap.OnPolygonClickListener);
         }

@@ -18,7 +18,7 @@ import sg.edu.smu.livelabs.citygangs.Models.LoginTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
 
 public class LoginActivity extends AppCompatActivity {
-    public static final String BASE_URL =   "is416app.139.59.238.27.nip.io/api";
+    public static final String BASE_URL =   "http://is416app.139.59.238.27.nip.io/api/";
     private LoginInterface service;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void autoLogin(View view) {
+
         //here i just give it the hardcoded user
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
         loginTokenRequest.setEmail("test@example.com");
