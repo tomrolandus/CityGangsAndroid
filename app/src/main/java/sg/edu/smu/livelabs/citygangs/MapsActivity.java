@@ -60,35 +60,18 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
     public void onMapReady(GoogleMap googleMap) {
 
         mMap = googleMap;
-        //Polygon is what we use to define the areas
-        Polygon polygon = mMap.addPolygon(new PolygonOptions()
+        MapResources tmp = new MapResources();
+        for(Area area : tmp.getAreas()){
+            PolygonOptions tmpOptions = new PolygonOptions();
+            for(LatLng latLng : area.getLatLngs()){
+                tmpOptions.add(latLng);
+            }
+            tmpOptions.strokeColor(area.getStrokeColor());
+            tmpOptions.fillColor(area.getFillColor());
+            mMap.addPolygon(tmpOptions);
+        }
 
 
-                .add(new LatLng(1.2896700, 103.8500700),
-                        new LatLng(1.2896700, 103.8600700),
-                        new LatLng(1.2996700, 103.8500700),
-                        new LatLng(1.2896700, 103.8500700))
-                //notice the last one == the first one
-
-                //Stroke of the outside of the polygon
-                .strokeColor(Color.RED)
-
-                //color uses the ARGB format which is as follows:
-                //0xTTRRGGBB where TT is percentage of transparency, RR GG BB hexa values [00;ff]
-                .fillColor(0x40001010));
-
-
-        //Coordinates of Singapore in decimal degrees
-        LatLng singapore = new LatLng(1.2896700, 103.8500700);
-
-        //add a marker (the red thing)
-        mMap.addMarker(new MarkerOptions().position(singapore).title("Marker in Singapore"));
-
-//        //move the camera to Singapore
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(singapore));
-//
-//        //The initial ZOOM of the map
-//        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(singapore, 11));
 
         mMap.setOnMyLocationButtonClickListener(this);
         enableMyLocation();
@@ -112,5 +95,31 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
             mMap.setMyLocationEnabled(true);
         }
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode != LOCATION_PERMISSION_REQUEST_CODE) {
+            return;
+        }
+
+        if (PermissionUtils.isPermissionGranted(permissions, grantResults,
+                Manifest.permission.ACCESS_FINE_LOCATION)) {
+            // Enable the my location layer if the permission has been granted.
+            enableMyLocation();
+        } else {
+            // Display the missing permission error dialog when the fragments resume.
+            mPermissionDenied = true;
+        }
+    }
+
+    @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+        if (mPermissionDenied) {
+            mPermissionDenied = false;
+        }
+    }
+
 
 }
