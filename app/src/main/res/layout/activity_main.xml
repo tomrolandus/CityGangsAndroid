@@ -34,6 +34,13 @@
             android:layout_gravity="center_horizontal"
             android:singleLine="false"
             android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:text="Go to Login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MainLogin"
+            android:onClick="startLoginActivity (MainActivity)" />
         <!--<Button android:id="@+id/btnStopService"-->
             <!--android:layout_width="fill_parent"-->
             <!--android:layout_height="wrap_content"-->

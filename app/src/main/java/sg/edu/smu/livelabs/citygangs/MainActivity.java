@@ -29,5 +29,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(getBaseContext(), FaceRecogActivity.class));
     }
 
+    public void startLoginActivity(View view) {
+        startActivity(new Intent(getBaseContext(), LoginActivity.class));
+    }
+
 
 }

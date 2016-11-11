@@ -12,12 +12,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.4.0/40340c0748190fe897baf7bffbc1b282734294e5/okhttp-2.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-2.4.0_0b92aca67f205b2196408912766eb791d16b98b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_9988815c985b3c6c1f97704764d5abc8728de8d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="c8f5d56f8f8a287c95e02c542baade138a378048">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-9.4.0_c2d1ac74f09d53ef4d37a12bbb68beefc8a149a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.4.0_f6a1b765894758b777ce04a223ad62c206ae5e38/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -39,6 +66,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.4.0_4e212ef95f2c5ee1d2d0fc901b60dee44442e44d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_8c16bf50bb56a14073bd064d7fc35088c5781337/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/libs/internal_impl-24.2.0.jar"
         jumboMode="true"
         optimize="true"
@@ -48,12 +93,57 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.1.0_60c29a59dcc3cf65bb38501e4f00f9d5a00a9f13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_5e22cf0073eda03559b92815abd870de19a9c464/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.4.0_670e0dce82beb3a63b1cfdfe10c92dcb7266f736/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.4.0_459a3af8781aa27676468b3fc32c09fd0f25d508/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.0_092a415340b5574a746a5fbb084b31628399e442/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.4.0_2e9074f995fc17b2e56f1019e19c8e241400a3cd/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,12 +165,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.microsoft.projectoxford/face/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9885b9cbfc39129a13674d39d0cae321fc0dc97">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.microsoft.projectoxford-face-1.0.0_2c5f7ba6aa32e8be133c7fe23f461ee0d5ea6602/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="a432629397351d3ec7f27a23d258b229b81af08f">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-9.4.0_1ea43991ee9d73cb1e7d1f786cf4301b98ba43b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_10dccc0b2c68dc5d6ee3310e06d0acc561654206/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,12 +210,48 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_a44cbd7a87268d1760f22fbc82ab49f5482f7df7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="736d8893fb702f128a153c9d87c9c29724d37872">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-9.4.0_5ecc54c3d8e5cee764c09840a4c22cfda5b0a98f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.4.0_e233be71d89b3aa9b7b18a28753ab7f289ce1450/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.4.0_58b192d83c9aebbc28d8dcce10aa0220b2c2795c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.4.0_e6ce15a6ba314765dba1f8268b2e79924253f021/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -129,6 +273,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.4.0_71e6bae87ebd6f842dc8d547036518b0802f3f00/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -138,12 +291,75 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.4.0_f1adb3e3071796d8b0c424347060e3b6b9e5d345/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.4.0_8770609524894816371fc06c9e042550f42a425a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.4.0_7a3998535ef7ffe918179d1e78dadc413976c3e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.4.0_b0b6fdb3dd103bad91390a97bd26bb4de08f8ff8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="b9d48baf96c7e187991a9befa833bebd181960a9">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-9.4.0_8dc6491c2021c6827f60a96df18e86097a8df2b2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.3.0_05f49c3d4da19765680575a0b6f07a5613b618c4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.4.0_5860a2b9f8fdb20dc6c3f92841e8fc19e4c9a6dc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.4.0_475a4da9c2d1fcf3006b50b020139f69aceea9fa/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -165,12 +381,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.4.0_2cfdc5e3d654d91e8a8ebcd98fc01b074d616fcf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.4.0_968cba7f5e7e851bd02d266ff6d7a7b929c67b6f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.0_0f26ef24edb4047658d5e4eba52452711d1b07a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_449140aa3672c965f5718055d11272a21f7ce834/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -219,285 +462,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="670df81539ab71918d49b186598b7eff08ef6563">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.4.0_a87ae7267ffd8bbfc150660e32d7ad5753d656d7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0cc749f7cbcd1328f8d3f070f4744936eae04613">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9959306eab79d5fd3cb98de36e56932ccf7a1a15/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.4.0_ee2fc2333bc582fd2957ad06cde11c55146af83d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-contextmanager-9.4.0_b8cec6a01799b3d7373da1344e874afad2d097f3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3.1/ecb6e1f8e4b0e84c4b886c2f14a1500caf309757/gson-2.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.3.1_f165f5d40965a52a3887490eca7e96528f64856b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_e56bb043c6d63aad39eae31674f53f0875ae0cc9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_e3b0c2bfbd276677b3d4544c4753a61747595580/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-23.0.0_7fd97c3394ac954bd4ad83e86acd3811926fcd1d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.4.0_4b5f91250eacd6e5b46fcaeb7d2d9f18499013ca/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-9.4.0_f6a1b765894758b777ce04a223ad62c206ae5e38/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth-common/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="34762013d39dbe6c656050589c44e8b61b9a2c5d">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-common-9.4.0_4e212ef95f2c5ee1d2d0fc901b60dee44442e44d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.0/jars/libs/internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_8c16bf50bb56a14073bd064d7fc35088c5781337/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.0/support-annotations-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.0_5e22cf0073eda03559b92815abd870de19a9c464/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="dab6944860c986980dcc6002a5ca2f127b587317">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-9.4.0_670e0dce82beb3a63b1cfdfe10c92dcb7266f736/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8ce5e7a4a146dddd1d9e66b09c714a6c149916d8">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-9.4.0_459a3af8781aa27676468b3fc32c09fd0f25d508/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7bc6ea2bcfd6de4b7085e0f3a01616c5c8e0e2ad">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-9.4.0_2e9074f995fc17b2e56f1019e19c8e241400a3cd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.microsoft.projectoxford/face/1.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9885b9cbfc39129a13674d39d0cae321fc0dc97">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.microsoft.projectoxford-face-1.0.0_2c5f7ba6aa32e8be133c7fe23f461ee0d5ea6602/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.0_a44cbd7a87268d1760f22fbc82ab49f5482f7df7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d49118ba67a101c4895f0581f17142cba85b330b">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-9.4.0_e233be71d89b3aa9b7b18a28753ab7f289ce1450/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ece40b09e9d4d488bc270cf6af5a9af73bc1cfa3">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-9.4.0_58b192d83c9aebbc28d8dcce10aa0220b2c2795c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="88848548ab56d4fbf3d2d1b0c85bf1ff9b4c1f4b">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.4.0_e6ce15a6ba314765dba1f8268b2e79924253f021/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0b060160e7daee343f5315b3da91b0ff2d7eed89">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-9.4.0_71e6bae87ebd6f842dc8d547036518b0802f3f00/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="59a16a4a42d25b2c243dd1e8aea87d06895b4a06">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-9.4.0_f1adb3e3071796d8b0c424347060e3b6b9e5d345/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a440fb3fec30ff925e9f601cc458fb6671834cb2">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.4.0_8770609524894816371fc06c9e042550f42a425a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4b630471536351be7c3c3100735c75b7ad2cbd84">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-9.4.0_7a3998535ef7ffe918179d1e78dadc413976c3e3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b1acf13f1b7d8232af78a30833f9a966d1394c84">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-9.4.0_b0b6fdb3dd103bad91390a97bd26bb4de08f8ff8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5e04c0b3683ca45b343284d93e5594b5f9044551">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-9.4.0_5860a2b9f8fdb20dc6c3f92841e8fc19e4c9a6dc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-9.4.0_475a4da9c2d1fcf3006b50b020139f69aceea9fa/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="dd51b31890731591729f046d7a09c4fe4e483ed1">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-9.4.0_2cfdc5e3d654d91e8a8ebcd98fc01b074d616fcf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/9.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e35002351f2d415093a9b564652d4b56be6a0593">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-9.4.0_968cba7f5e7e851bd02d266ff6d7a7b929c67b6f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.0_449140aa3672c965f5718055d11272a21f7ce834/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -516,11 +480,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="670df81539ab71918d49b186598b7eff08ef6563">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.4.0_a87ae7267ffd8bbfc150660e32d7ad5753d656d7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="f3a142c2368074f93042e59241b469596b9fc45c">
+        sha1="89b5c3acf8a47570e47a2bbc2ec82f4cbbc21e79">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5d421a80cc0cf5dc1e8e3138fbcd7623d55907a0/classes.dex" />
     </item>
     <item
@@ -534,6 +507,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a9ad9db05df4ffb6da6104921e8c359c8ee02167">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_9959306eab79d5fd3cb98de36e56932ccf7a1a15/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -543,12 +525,48 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-9.4.0_ee2fc2333bc582fd2957ad06cde11c55146af83d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.8.0_bd235a83ce6378beeda4eea67cd35b05fd62e940/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-contextmanager/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="72eacac37fc64e95d53abd2a041bf81a952d8615">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-contextmanager-9.4.0_b8cec6a01799b3d7373da1344e874afad2d097f3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-9.4.0_badaab7439fbfd6afb57def9d89771af180fdf3d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.0/jars/libs/internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.0_e56bb043c6d63aad39eae31674f53f0875ae0cc9/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -606,6 +624,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.0_e3b0c2bfbd276677b3d4544c4753a61747595580/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -621,6 +648,24 @@
         revision="24.0.2"
         sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.0_1f71d2f60ea88b014bb4bcecb48c237be583fdce/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-23.0.0_7fd97c3394ac954bd4ad83e86acd3811926fcd1d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/9.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="98e97da89d4df8e2f6eba63498d3d46a587372f2">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-9.4.0_4b5f91250eacd6e5b46fcaeb7d2d9f18499013ca/classes.dex" />
     </item>
 
 </items>

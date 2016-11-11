@@ -10,4 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="sg.edu.smu.livelabs.citygangs.LoginActivity">
 
+    <Button
+        android:text="AutoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:onClick="autoLogin"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="68dp"
+        android:id="@+id/AutoLogin" />
 </RelativeLayout>
