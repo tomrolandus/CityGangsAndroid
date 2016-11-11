@@ -54,7 +54,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="sg.edu.smu.livelabs.citygangs.MainActivity" />
         </activity>
-        <activity android:name=".SelectImageActivity"></activity>
+        <activity android:name=".SelectImageActivity" />
+
+        <service
+            android:name=".ServerService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import okhttp3.OkHttpClient;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,5 +28,6 @@ public class MainActivity extends AppCompatActivity {
     public void startFaceRecogActivity(View view) {
         startActivity(new Intent(getBaseContext(), FaceRecogActivity.class));
     }
+
 
 }
