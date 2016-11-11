@@ -7,7 +7,9 @@ import com.google.android.gms.maps.model.Polygon;
 import com.google.android.gms.maps.model.PolygonOptions;
 
 import java.util.ArrayList;
-
+//TODO ADVANCED change to different shapes of polygons
+//TODO ADVANCED implement ray-casting algorithm to check whether in polygon
+//TODO implement method to check whether inside square
 /**
  * Created by tomrolandus on 11/11/16.
  */
@@ -26,9 +28,9 @@ public class MapResources {
     }
 
     public void createAreas() {
-        double squareSize = 0.005;
+        double squareSize = 0.005; // size of each square
         areas = new ArrayList<Area>();
-        LatLng iLatLng = new LatLng(1.2696700, 103.8100700);
+        LatLng iLatLng = new LatLng(1.2696700, 103.8100700); // Latitude and Longitude of bottom left corner of bottom left square
         ArrayList<LatLng> tmpLatLgns = new ArrayList<LatLng>();
         ;
         Area tmpArea;

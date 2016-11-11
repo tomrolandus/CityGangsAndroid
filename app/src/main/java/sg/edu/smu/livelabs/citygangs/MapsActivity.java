@@ -68,7 +68,9 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
             }
             tmpOptions.strokeColor(area.getStrokeColor());
             tmpOptions.fillColor(area.getFillColor());
-            mMap.addPolygon(tmpOptions);
+            Polygon poly = mMap.addPolygon(tmpOptions);
+            poly.setClickable(true);
+            mMap.setOnPolygonClickListener();
         }
 
 
