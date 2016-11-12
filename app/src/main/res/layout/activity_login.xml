@@ -13,17 +13,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Enter Email"
-        android:ems="10"
-        android:layout_marginTop="11dp"
-        android:id="@+id/enterEmail"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
         android:layout_below="@+id/enterEmail"
@@ -33,6 +22,7 @@
 
     <Button
         android:text="Login"
+        android:onClick="login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/enterEmail"
@@ -50,4 +40,33 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42dp" />
+
+    <TextView
+        android:text="Status: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterPassword"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:id="@+id/fixStatusTV" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Enter Email"
+        android:ems="10"
+        android:layout_marginTop="11dp"
+        android:id="@+id/enterEmail"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Not connected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fixStatusTV"
+        android:layout_toEndOf="@+id/fixStatusTV"
+        android:layout_marginStart="10dp"
+        android:id="@+id/logingStatusTV" />
 </RelativeLayout>

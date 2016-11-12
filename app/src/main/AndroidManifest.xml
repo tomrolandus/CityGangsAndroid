@@ -51,8 +51,12 @@
                 android:value="sg.edu.smu.livelabs.citygangs.MainActivity" />
         </activity>
         <activity android:name=".SelectImageActivity" />
+        <activity android:name=".LoginActivity" />
 
-        <activity android:name=".LoginActivity"></activity>
+        <service
+            android:name=".LogicService"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>
