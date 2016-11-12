@@ -466,7 +466,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="d57811949e61b3940c62c3674ec64aed2ff01400">
+        sha1="dc2747761c24cb4c0022f1a8c9b5327a7ed2b59f">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5d421a80cc0cf5dc1e8e3138fbcd7623d55907a0/classes.dex" />
     </item>
     <item

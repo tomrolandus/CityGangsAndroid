@@ -5,6 +5,7 @@ import android.app.*;
 import android.content.*;
 import android.net.*;
 import android.os.*;
+import android.support.v7.app.AppCompatActivity;
 import android.view.*;
 import android.graphics.*;
 import android.widget.*;
@@ -23,17 +24,17 @@ import java.io.InputStream;
 /**
  * Created by tomrolandus on 10/11/16.
  */
-public class FaceRecogActivity extends Activity {
+public class FaceRecogActivity extends AppCompatActivity {
 
     private final int PICK_IMAGE = 1;
     private ProgressDialog detectionProgressDialog;
 
-    private FaceServiceClient faceServiceClient =
-            new FaceServiceRestClient(getString(R.string.face_licence));
-
+    private FaceServiceClient faceServiceClient;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_recog);
+        faceServiceClient = new FaceServiceRestClient(getString(R.string.face_licence));
+
         Button button1 = (Button)findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override

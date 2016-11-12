@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.google.android.gms.drive.query.internal.LogicalFilter;
+
 import okhttp3.OkHttpClient;
 
 
@@ -31,6 +33,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void startLoginActivity(View view) {
         startActivity(new Intent(getBaseContext(), LoginActivity.class));
+    }
+
+    public void startLogicService(View view) {
+        startService(new Intent(getBaseContext(), LogicService.class));
+    }
+
+    // Method to stop the service
+    public void stopLogicService(View view) {
+        stopService(new Intent(getBaseContext(), LogicService.class));
     }
 
 
