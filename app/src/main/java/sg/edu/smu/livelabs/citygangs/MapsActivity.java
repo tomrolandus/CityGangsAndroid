@@ -59,10 +59,8 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-//Log.d("onMapReady","The map is ready");
         mMap = googleMap;
         MapResources tmp = new MapResources();
-        Log.d("onMapReady", "Amount of areas: " +tmp.getAreas().size());
         for(Area area : tmp.getAreas()){
             PolygonOptions tmpOptions = new PolygonOptions();
             for(LatLng latLng : area.getLatLngs()){

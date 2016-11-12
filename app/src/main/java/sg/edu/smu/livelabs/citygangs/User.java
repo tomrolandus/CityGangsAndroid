@@ -1,5 +1,6 @@
 package sg.edu.smu.livelabs.citygangs;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -9,30 +10,47 @@ import com.google.gson.annotations.SerializedName;
 public class User {
 
     @SerializedName("id")
+    @Expose
     private int id;
 
     @SerializedName("username")
+    @Expose
     private String username;
 
     @SerializedName("name")
+    @Expose
     private String name;
 
     @SerializedName("email")
+    @Expose
     private String email;
 
     @SerializedName("password")
+    @Expose
     private String password;
 
-    @SerializedName("kills")
-    private int kills;
+    @SerializedName("photo_1")
+    @Expose
+    private String photo_1;
+
+    @SerializedName("photo_2")
+    @Expose
+    private String photo_2;
 
     @SerializedName("current_distance")
+    @Expose
     private int currentDistance;
 
     @SerializedName("total_distance")
+    @Expose
     private int totalDistance;
 
+    @SerializedName("kills")
+    @Expose
+    private int kills;
+
     @SerializedName("team_id")
+    @Expose
     private int teamID;
 
 
@@ -119,4 +137,5 @@ public class User {
     public void setTeamID(int teamID) {
         this.teamID = teamID;
     }
+
 }

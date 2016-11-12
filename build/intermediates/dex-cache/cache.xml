@@ -462,6 +462,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d57811949e61b3940c62c3674ec64aed2ff01400">
+        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5d421a80cc0cf5dc1e8e3138fbcd7623d55907a0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.4.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -486,15 +495,6 @@
         revision="24.0.2"
         sha1="670df81539ab71918d49b186598b7eff08ef6563">
         <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-9.4.0_a87ae7267ffd8bbfc150660e32d7ad5753d656d7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="89b5c3acf8a47570e47a2bbc2ec82f4cbbc21e79">
-        <dex dex="/Users/tomrolandus/Documents/workspace2/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5d421a80cc0cf5dc1e8e3138fbcd7623d55907a0/classes.dex" />
     </item>
     <item
         is-multidex="true"

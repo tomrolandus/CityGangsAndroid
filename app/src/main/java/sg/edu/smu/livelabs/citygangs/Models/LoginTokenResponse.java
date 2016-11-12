@@ -9,7 +9,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginTokenResponse {
     @SerializedName("token")
-    @Expose
     private String token;
 
     public String getToken(){

@@ -24,10 +24,6 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".MyService"
-            android:enabled="true"
-            android:exported="true" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -55,11 +51,6 @@
                 android:value="sg.edu.smu.livelabs.citygangs.MainActivity" />
         </activity>
         <activity android:name=".SelectImageActivity" />
-
-        <service
-            android:name=".ServerService"
-            android:enabled="true"
-            android:exported="true" />
 
         <activity android:name=".LoginActivity"></activity>
     </application>
