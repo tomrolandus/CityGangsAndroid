@@ -3,12 +3,11 @@ package sg.edu.smu.livelabs.citygangs;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.google.android.gms.drive.query.internal.LogicalFilter;
 
-import okhttp3.OkHttpClient;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.AddFaceToPersonActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Method to start the Face recognition activity
     public void startFaceRecogActivity(View view) {
-        startActivity(new Intent(getBaseContext(), FaceRecogActivity.class));
+        startActivity(new Intent(getBaseContext(), FaceRecogActivityOld.class));
     }
 
     public void startLoginActivity(View view) {
@@ -42,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
     // Method to stop the service
     public void stopLogicService(View view) {
         stopService(new Intent(getBaseContext(), LogicService.class));
+    }
+
+    //ADD FACE TO PERSON ACTIVITY
+    public void startAddFaceToPersonActivity(View view) {
+        startActivity(new Intent(getBaseContext(), AddFaceToPersonActivity.class));
     }
 
 

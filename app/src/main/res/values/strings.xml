@@ -13,6 +13,7 @@
 
 
     <!-- Main activity -->
+    <string name="subscription_key">f9b5143e921643e6a17be5d83a1b8796</string>
     <string name="detection">Detection</string>
     <string name="verification">Verification</string>
     <string name="identification">Identification</string>
