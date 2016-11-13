@@ -10,67 +10,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c1036d2f-0199-4bbe-b85a-696a2b7d0b87" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/design_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/recyclerview_v7_24_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/log/FindSimilarFaceLogActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/log/GroupingLogActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/FindSimilarFaceActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/GroupingActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/SelectImageActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_similar_face.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_find_similar_face_log.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_grouping.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_grouping_log.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-24.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_24_0_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mediarouter_v7_24_0_0.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" afterPath="$PROJECT_DIR$/app/src/debug/res/values/google_maps_api.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/log/IdentificationLogActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/log/IdentificationLogActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/log/VerificationLogActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/log/VerificationLogActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/AddFaceToPersonActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/AddFaceToPersonActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/PersonActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/PersonActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/PersonGroupActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/PersonGroupActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/PersonGroupListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/persongroupmanagement/PersonGroupListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/DetectionActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/DetectionActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/FaceRecogActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/FaceRecogActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/FaceVerificationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/FaceVerificationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/IdentificationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/IdentificationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/PersonVerificationActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/PersonVerificationActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/SelectImageActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/SelectImageActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/VerificationMenuActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/VerificationMenuActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceRecogActivityOld.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceRecogActivityOld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/PersonActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/PersonActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_face_to_person.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_add_face_to_person.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detection.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detection.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detection_log.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detection_log.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_face_recog.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_face_recog.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_identification.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_identification.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_identification_log.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_identification_log.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_maps.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_image.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_select_image.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification_log.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification_log.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification_menu.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_verification_menu.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-    </list>
+    <list default="true" id="c1036d2f-0199-4bbe-b85a-696a2b7d0b87" name="Default" comment="" />
     <ignored path="CityGangsAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -225,7 +165,7 @@
       <file leaf-file-name="IdentificationActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/IdentificationActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
+            <state relative-caret-position="408">
               <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
               <folding />
             </state>
@@ -3652,7 +3592,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/FaceAPI/ui/IdentificationActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
+        <state relative-caret-position="408">
           <caret line="114" column="23" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="23" />
           <folding />
         </state>
