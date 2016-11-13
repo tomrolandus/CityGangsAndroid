@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <uses-library android:name="com.google.android.maps" />
 
     <application
@@ -19,7 +20,6 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
 
         <!-- MAIN ACTIVITY -->
         <activity android:name=".MainActivity">
@@ -46,29 +46,27 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="sg.edu.smu.livelabs.citygangs.MainActivity" />
         </activity>
-
         <activity android:name=".LoginActivity" />
-
-
         <activity
             android:name=".FaceAPI.ui.FaceRecogActivity"
             android:label="Face recognition"
             android:launchMode="singleTop"
-            android:screenOrientation="portrait" >
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value="sg.edu.smu.livelabs.citygangs.MainActivity" />-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            android:screenOrientation="portrait">
+
+            <!-- <meta-data -->
+            <!-- android:name="android.support.PARENT_ACTIVITY" -->
+            <!-- android:value="sg.edu.smu.livelabs.citygangs.MainActivity" /> -->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".FaceAPI.ui.DetectionActivity"
             android:label="@string/detection"
             android:launchMode="singleTop"
             android:parentActivityName=".FaceAPI.ui.FaceRecogActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.FaceRecogActivity" />
@@ -78,7 +76,7 @@
             android:label="@string/face_verification"
             android:launchMode="singleTop"
             android:parentActivityName=".FaceAPI.ui.VerificationMenuActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.FaceRecogActivity" />
@@ -88,7 +86,7 @@
             android:label="@string/person_verification"
             android:launchMode="singleTop"
             android:parentActivityName="FaceAPI.ui.VerificationMenuActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.FaceRecogActivity" />
@@ -97,22 +95,22 @@
             android:name=".FaceAPI.ui.IdentificationActivity"
             android:label="@string/identification"
             android:launchMode="singleTop"
-            android:parentActivityName=""
-            android:screenOrientation="portrait" >
+            android:parentActivityName="sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.FaceRecogActivity" />
         </activity>
-        <!--<activity-->
-            <!--android:name=".FaceAPI.ui.FindSimilarFaceActivity"-->
-            <!--android:label="@string/find_similar_faces"-->
-            <!--android:launchMode="singleTop"-->
-            <!--android:parentActivityName=".FaceAPI.ui.FaceRecogActivity"-->
-            <!--android:screenOrientation="portrait" >-->
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value=".FaceAPI.ui.FaceRecogActivity" />-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name=".FaceAPI.ui.FindSimilarFaceActivity" -->
+        <!-- android:label="@string/find_similar_faces" -->
+        <!-- android:launchMode="singleTop" -->
+        <!-- android:parentActivityName=".FaceAPI.ui.FaceRecogActivity" -->
+        <!-- android:screenOrientation="portrait" > -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+        <!-- android:value=".FaceAPI.ui.FaceRecogActivity" /> -->
+        <!-- </activity> -->
         <activity
             android:name=".FaceAPI.ui.SelectImageActivity"
             android:label="@string/select_an_image"
@@ -127,7 +125,7 @@
             android:label="@string/person_group_list"
             android:launchMode="singleTop"
             android:parentActivityName=".FaceAPI.ui.IdentificationActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.IdentificationActivity" />
@@ -136,9 +134,9 @@
             android:name=".FaceAPI.persongroupmanagement.PersonGroupActivity"
             android:label="@string/person_group"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustNothing"
             android:parentActivityName=".FaceAPI.persongroupmanagement.PersonGroupListActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.persongroupmanagement.PersonGroupListActivity" />
@@ -147,9 +145,9 @@
             android:name=".FaceAPI.persongroupmanagement.PersonActivity"
             android:label="@string/person"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="adjustNothing"
             android:parentActivityName=".FaceAPI.persongroupmanagement.PersonGroupActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustNothing">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.persongroupmanagement.PersonGroupActivity" />
@@ -158,7 +156,7 @@
             android:name=".FaceAPI.persongroupmanagement.AddFaceToPersonActivity"
             android:label="@string/add_face_to_person"
             android:parentActivityName=".FaceAPI.persongroupmanagement.PersonActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.persongroupmanagement.PersonActivity" />
@@ -167,7 +165,7 @@
             android:name=".FaceAPI.log.DetectionLogActivity"
             android:label="@string/detection_log"
             android:parentActivityName=".FaceAPI.ui.DetectionActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.DetectionActivity" />
@@ -176,29 +174,30 @@
             android:name=".FaceAPI.log.VerificationLogActivity"
             android:label="@string/verification_log"
             android:parentActivityName=".FaceAPI.ui.FaceVerificationActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.FaceVerificationActivity" />
         </activity>
-        <!--<activity-->
-            <!--android:name=".FaceAPI.log.FindSimilarFaceLogActivity"-->
-            <!--android:label="@string/find_similar_face_log"-->
-            <!--android:parentActivityName=".FaceAPI.ui.FindSimilarFaceActivity"-->
-            <!--android:screenOrientation="portrait" >-->
-            <!--<meta-data-->
-                <!--android:name="android.support.PARENT_ACTIVITY"-->
-                <!--android:value=".FaceAPI.ui.FindSimilarFaceActivity" />-->
-        <!--</activity>-->
+        <!-- <activity -->
+        <!-- android:name=".FaceAPI.log.FindSimilarFaceLogActivity" -->
+        <!-- android:label="@string/find_similar_face_log" -->
+        <!-- android:parentActivityName=".FaceAPI.ui.FindSimilarFaceActivity" -->
+        <!-- android:screenOrientation="portrait" > -->
+        <!-- <meta-data -->
+        <!-- android:name="android.support.PARENT_ACTIVITY" -->
+        <!-- android:value=".FaceAPI.ui.FindSimilarFaceActivity" /> -->
+        <!-- </activity> -->
         <activity
             android:name=".FaceAPI.log.IdentificationLogActivity"
             android:label="@string/identification_log"
             android:parentActivityName=".FaceAPI.ui.IdentificationActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.IdentificationActivity" />
         </activity>
+
     </application>
 
 </manifest>
