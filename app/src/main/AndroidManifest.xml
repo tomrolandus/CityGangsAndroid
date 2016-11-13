@@ -95,7 +95,7 @@
             android:name=".FaceAPI.ui.IdentificationActivity"
             android:label="@string/identification"
             android:launchMode="singleTop"
-            android:parentActivityName="sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity"
+            android:parentActivityName=".FaceAPI.ui.FaceRecogActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -197,7 +197,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.IdentificationActivity" />
         </activity>
-
+        <activity android:name=".FaceAPI.ui.Kill" />
+        <activity android:name=".FaceAPI.ui.DefendTerritory" />
+        <activity android:name=".Preferences" />
+        <activity android:name=".PhotosActivity"></activity>
     </application>
 
 </manifest>

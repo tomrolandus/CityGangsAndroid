@@ -111,6 +111,7 @@ public class StorageHelper {
         return personIdNameMap.getString(personId, "");
     }
 
+
     public static void setPersonName(String personIdToAdd, String personName, String personGroupId, Context context) {
         SharedPreferences personIdNameMap =
                 context.getSharedPreferences(personGroupId + "PersonIdNameMap", Context.MODE_PRIVATE);
@@ -131,6 +132,7 @@ public class StorageHelper {
         personIdSetEditor.putStringSet("PersonIdSet", newPersonIds);
         personIdSetEditor.commit();
     }
+
 
     public static void deletePersons(List<String> personIdsToDelete, String personGroupId, Context context) {
         SharedPreferences personIdNameMap =

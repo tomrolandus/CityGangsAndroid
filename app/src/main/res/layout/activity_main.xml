@@ -58,11 +58,12 @@
             android:id="@+id/btnStopLogicService"
             android:onClick="stopLogicService" />
 
-        <TextView
-            android:text="TextView"
+        <Button
+            android:text="Preferences"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/userMainTV" />
+            android:id="@+id/btnPreferences"
+            android:onClick="startPreferencesActivity" />
 
         <!--<Button android:id="@+id/btnStopService"-->
             <!--android:layout_width="fill_parent"-->

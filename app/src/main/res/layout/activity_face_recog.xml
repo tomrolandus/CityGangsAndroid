@@ -78,38 +78,38 @@
     </LinearLayout>
 
 
-    <!--<LinearLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="0dp"-->
-        <!--android:layout_weight="1"-->
-        <!--android:orientation="horizontal" >-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
 
-        <!--<ScrollView-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_height="match_parent" >-->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" >
 
-            <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_vertical"-->
-                <!--android:gravity="center_vertical"-->
-                <!--android:text="@string/find_similar_face_description" />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="@string/kill" />
 
-        <!--</ScrollView>-->
+        </ScrollView>
 
-        <!--<Button-->
-            <!--android:layout_width="0dp"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:text="@string/find_similar_faces"-->
-            <!--android:layout_weight="1"-->
-            <!--android:layout_marginLeft="@dimen/view_margin"-->
-            <!--android:layout_marginStart="@dimen/view_margin"-->
-            <!--android:onClick="findSimilarFace"-->
-            <!--style="@style/ButtonStyle" />-->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/kill"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/view_margin"
+            android:layout_marginStart="@dimen/view_margin"
+            style="@style/ButtonStyle"
+            android:onClick="defendTerritory" />
 
-    <!--</LinearLayout>-->
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

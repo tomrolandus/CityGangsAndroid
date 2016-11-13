@@ -60,4 +60,8 @@ public class MainActivity extends AppCompatActivity {
         else
             userMain.setText("null");
     }
+
+    public void startPreferencesActivity(View view){
+        startActivity(new Intent(getBaseContext(), PreferencesActivity.class));
+    }
 }

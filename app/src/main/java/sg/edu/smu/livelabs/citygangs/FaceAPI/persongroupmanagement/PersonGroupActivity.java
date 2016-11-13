@@ -458,7 +458,7 @@ public class PersonGroupActivity extends AppCompatActivity {
 
     private class PersonGridViewAdapter extends BaseAdapter {
 
-        List<String> personIdList;
+            List<String> personIdList;
         List<Boolean> personChecked;
         boolean longPressed;
 

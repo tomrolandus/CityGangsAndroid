@@ -59,6 +59,7 @@
     <string name="person_groups">Person Groups</string>
     <string name="target_image">Target image</string>
     <string name="faces">Faces in image</string>
+    <string name="kill">Kill enemy</string>
 
     <!-- Person group management activities -->
     <string name="delete">Delete</string>
