@@ -60,10 +60,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.R;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -87,7 +88,7 @@ public class PersonGroupActivity extends AppCompatActivity {
             addLog("Request: Creating person group " + params[0]);
 
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Syncing with server to add person group...");
 
@@ -145,7 +146,7 @@ public class PersonGroupActivity extends AppCompatActivity {
             addLog("Request: Training group " + params[0]);
 
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Training person group...");
 
@@ -188,7 +189,7 @@ public class PersonGroupActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Deleting selected persons...");
                 addLog("Request: Deleting person " + params[0]);

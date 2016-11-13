@@ -58,12 +58,6 @@
             android:id="@+id/btnStopLogicService"
             android:onClick="stopLogicService" />
 
-        <Button
-            android:text="@string/add_face_to_person"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnAddFaceToPersonActivity"
-            android:onClick="startAddFaceToPersonActivity" />
         <!--<Button android:id="@+id/btnStopService"-->
             <!--android:layout_width="fill_parent"-->
             <!--android:layout_height="wrap_content"-->

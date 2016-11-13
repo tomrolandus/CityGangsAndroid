@@ -55,13 +55,13 @@ import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.IdentifyResult;
 import com.microsoft.projectoxford.face.contract.TrainingStatus;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.ImageHelper;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.helper.StorageHelper;
-import com.microsoft.projectoxford.face.samples.log.IdentificationLogActivity;
-import com.microsoft.projectoxford.face.samples.persongroupmanagement.PersonGroupListActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.log.IdentificationLogActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonGroupListActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.R;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -95,7 +95,7 @@ public class IdentificationActivity extends AppCompatActivity {
             addLog(logString);
 
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Getting person group status...");
 
@@ -254,7 +254,7 @@ public class IdentificationActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Detecting...");
 

@@ -59,11 +59,12 @@ import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.CreatePersonResult;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.ui.SelectImageActivity;
-import com.microsoft.projectoxford.face.samples.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
+import sg.edu.smu.livelabs.citygangs.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +85,7 @@ public class PersonActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Syncing with server to add person...");
                 addLog("Request: Creating Person in person group" + params[0]);
@@ -143,7 +144,7 @@ public class PersonActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Deleting selected faces...");
                 addLog("Request: Deleting face " + params[0]);

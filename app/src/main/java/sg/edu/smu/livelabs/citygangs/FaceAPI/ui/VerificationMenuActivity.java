@@ -37,7 +37,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.microsoft.projectoxford.face.samples.R;
+import sg.edu.smu.livelabs.citygangs.R;
+
 
 /**
  * Created by wangjun on 5/24/2016.

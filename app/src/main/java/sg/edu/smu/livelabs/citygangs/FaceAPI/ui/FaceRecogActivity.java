@@ -49,7 +49,7 @@ public class FaceRecogActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_face_recog);
         sFaceServiceClient = new FaceServiceRestClient(getString(R.string.subscription_key));
 
         if (getString(R.string.subscription_key).startsWith("Please")) {
@@ -71,15 +71,15 @@ public class FaceRecogActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void grouping(View view) {
-        Intent intent = new Intent(this, GroupingActivity.class);
-        startActivity(intent);
-    }
+//    public void grouping(View view) {
+//        Intent intent = new Intent(this, GroupingActivity.class);
+//        startActivity(intent);
+//    }
 
-    public void findSimilarFace(View view) {
-        Intent intent = new Intent(this, FindSimilarFaceActivity.class);
-        startActivity(intent);
-    }
+//    public void findSimilarFace(View view) {
+//        Intent intent = new Intent(this, FindSimilarFaceActivity.class);
+//        startActivity(intent);
+//    }
 
     public void identification(View view) {
         Intent intent = new Intent(this, IdentificationActivity.class);

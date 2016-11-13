@@ -55,11 +55,7 @@ import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.AddPersistedFaceResult;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.FaceRectangle;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.ImageHelper;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.helper.StorageHelper;
+
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -72,6 +68,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.R;
+
 public class AddFaceToPersonActivity extends AppCompatActivity {
     // Background task of adding a face to person.
     class AddFaceTask extends AsyncTask<Void, String, Boolean> {
@@ -83,7 +85,7 @@ public class AddFaceToPersonActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Adding face...");
                 UUID personId = UUID.fromString(mPersonId);
@@ -136,7 +138,7 @@ public class AddFaceToPersonActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Detecting...");
 

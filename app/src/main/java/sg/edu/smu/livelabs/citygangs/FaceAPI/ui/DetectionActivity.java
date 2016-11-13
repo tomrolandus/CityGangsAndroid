@@ -52,11 +52,12 @@ import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.ImageHelper;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.log.DetectionLogActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.log.DetectionLogActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.R;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -75,7 +76,7 @@ public class DetectionActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try {
                 publishProgress("Detecting...");
 
@@ -89,7 +90,7 @@ public class DetectionActivity extends AppCompatActivity {
                         new FaceServiceClient.FaceAttributeType[] {
                                 FaceServiceClient.FaceAttributeType.Age,
                                 FaceServiceClient.FaceAttributeType.Gender,
-                                FaceServiceClient.FaceAttributeType.Glasses,
+//                                FaceServiceClient.FaceAttributeType.Glasses,
                                 FaceServiceClient.FaceAttributeType.Smile,
                                 FaceServiceClient.FaceAttributeType.HeadPose
                         });
@@ -370,7 +371,7 @@ public class DetectionActivity extends AppCompatActivity {
                     + "Gender: " + faces.get(position).faceAttributes.gender + "\n"
                     + "Head pose(in degree): roll(" + formatter.format(faces.get(position).faceAttributes.headPose.roll) + "), "
                     + "yaw(" + formatter.format(faces.get(position).faceAttributes.headPose.yaw) + ")\n"
-                    + "Glasses: " + faces.get(position).faceAttributes.glasses + "\n"
+//                    + "Glasses: " + faces.get(position).faceAttributes.glasses + "\n"
                     + "Smile: " + formatter.format(faces.get(position).faceAttributes.smile);
             ((TextView) convertView.findViewById(R.id.text_detected_face)).setText(face_description);
 

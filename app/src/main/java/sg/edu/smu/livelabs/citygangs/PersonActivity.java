@@ -39,6 +39,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
+
 /**
  * Created by tomrolandus on 10/11/16.
  */

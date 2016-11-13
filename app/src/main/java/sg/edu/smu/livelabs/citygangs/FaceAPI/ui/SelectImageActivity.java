@@ -42,10 +42,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.microsoft.projectoxford.face.samples.R;
+
 
 import java.io.File;
 import java.io.IOException;
+
+import sg.edu.smu.livelabs.citygangs.R;
 
 // The activity for the user to select a image and to detect faces in the image.
 public class SelectImageActivity extends AppCompatActivity {

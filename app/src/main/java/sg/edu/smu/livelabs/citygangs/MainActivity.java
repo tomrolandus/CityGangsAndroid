@@ -5,9 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.google.android.gms.drive.query.internal.LogicalFilter;
 
-import sg.edu.smu.livelabs.citygangs.FaceAPI.AddFaceToPersonActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Method to start the Face recognition activity
     public void startFaceRecogActivity(View view) {
-        startActivity(new Intent(getBaseContext(), FaceRecogActivityOld.class));
+        startActivity(new Intent(getBaseContext(), FaceRecogActivity.class));
     }
 
     public void startLoginActivity(View view) {
@@ -43,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         stopService(new Intent(getBaseContext(), LogicService.class));
     }
 
-    //ADD FACE TO PERSON ACTIVITY
-    public void startAddFaceToPersonActivity(View view) {
-        startActivity(new Intent(getBaseContext(), AddFaceToPersonActivity.class));
-    }
 
 
 }

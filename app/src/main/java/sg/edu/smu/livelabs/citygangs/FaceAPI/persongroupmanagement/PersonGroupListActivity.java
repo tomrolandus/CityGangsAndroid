@@ -55,15 +55,18 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.R;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
 
 
 public class PersonGroupListActivity extends AppCompatActivity {
@@ -73,7 +76,7 @@ public class PersonGroupListActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Deleting selected person groups...");
                 addLog("Request: Delete Group " + params[0]);

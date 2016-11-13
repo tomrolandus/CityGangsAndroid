@@ -50,16 +50,17 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.VerifyResult;
-import com.microsoft.projectoxford.face.samples.R;
-import com.microsoft.projectoxford.face.samples.helper.ImageHelper;
-import com.microsoft.projectoxford.face.samples.helper.LogHelper;
-import com.microsoft.projectoxford.face.samples.helper.SampleApp;
-import com.microsoft.projectoxford.face.samples.helper.StorageHelper;
-import com.microsoft.projectoxford.face.samples.log.VerificationLogActivity;
-import com.microsoft.projectoxford.face.samples.persongroupmanagement.PersonGroupListActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.log.VerificationLogActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonGroupListActivity;
+
+import sg.edu.smu.livelabs.citygangs.R;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -89,14 +90,14 @@ public class PersonVerificationActivity extends AppCompatActivity {
         @Override
         protected VerifyResult doInBackground(Void... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Verifying...");
 
                 // Start verification.
-                return faceServiceClient.verify(
+                return faceServiceClient.verify( //I REMOVED mPersonGroupId as second argument
                         mFaceId,      /* The face ID to verify */
-                        mPersonGroupId, /* The person group ID of the person*/
+                         /* The person group ID of the person*/
                         mPersonId);     /* The person ID to verify */
             }  catch (Exception e) {
                 publishProgress(e.getMessage());
@@ -138,7 +139,7 @@ public class PersonVerificationActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = SampleApp.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
             try{
                 publishProgress("Detecting...");
 
