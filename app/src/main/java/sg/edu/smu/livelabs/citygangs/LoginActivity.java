@@ -1,5 +1,8 @@
 package sg.edu.smu.livelabs.citygangs;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -29,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
     private String email;
     private String password;
     private TextView loginStatus;
+    private User user;
+//    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,66 +85,38 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This method allows you to quickly login using the hardcoded test@example.com
+     */
     public void autoLogin(View view) {
 
         //here i just give it the hardcoded user
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
         loginTokenRequest.setEmail("test@example.com");
         loginTokenRequest.setPassword("testtest");
-        final String email = "test@example.com";
 
-        Call<LoginTokenResponse> tokenResponseCall = service.getTokenAccess(loginTokenRequest);
-        tokenResponseCall.enqueue(new Callback<LoginTokenResponse>() {
-            @Override
-            public void onResponse(Call<LoginTokenResponse> call, Response<LoginTokenResponse> response) {
-                int statusCode = response.code();
-                LoginTokenResponse loginTokenResponse = response.body();
-                token = loginTokenResponse.getToken();
-                Log.d("autoLogin", "Token: " + token);
-            }
-
-            @Override
-            public void onFailure(Call<LoginTokenResponse> call, Throwable t) {
-                Log.d("LoginActivity", "OnFailure: " + t.getMessage());
-            }
-
-        });
-
-
-        Call<User> userCall = service.getUser(email, "Bearer " + token);
-        userCall.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                int userStatus = response.code();
-                if(userStatus == 200){
-                    loginStatus.setText("Connected");
-                }
-                User user = response.body();
-                Log.d("autoLogin", "responseCode: " + userStatus);
-                Log.d("autoLogin", "Name: " + user.getName());
-                Log.d("autoLogin", "username: " + user.getUsername());
-                Log.d("autoLogin", "Password: " + user.getPassword());
-                Log.d("autoLogin", "Email: " + user.getEmail());
-                Log.d("autoLogin", "ID: " + user.getId());
-                Log.d("autoLogin", "TeamID: " + user.getTeamID());
-
-
-            }
-
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-
-            }
-        });
-
-
+        getTokenAndUser(loginTokenRequest);
+//        generateToken(loginTokenRequest);
+//        getUser(loginTokenRequest.getEmail());
+//        if(user != null){
+//            Log.d("DEBUG","goToMain");
+//            goToMain();
+//        }
+//        else{
+//            Log.d("DEBUG","User is null");
+//        }
     }
 
-    public void login(View view) {
-        LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
-        loginTokenRequest.setEmail(email);
-        loginTokenRequest.setPassword(password);
 
+    private void startMainActivity() {
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        finish();
+    }
+
+
+    private void getTokenAndUser(final LoginTokenRequest loginTokenRequest) {
+        this.token = null;
+        this.user = null;
         Call<LoginTokenResponse> tokenResponseCall = service.getTokenAccess(loginTokenRequest);
         tokenResponseCall.enqueue(new Callback<LoginTokenResponse>() {
             @Override
@@ -147,15 +124,16 @@ public class LoginActivity extends AppCompatActivity {
 //                Log.d("DEBUG","onResponse, code: " +response.code());
                 int statusCode = response.code();
                 if (statusCode == 200) {
-                    loginStatus.setText("Connected");
+                    loginStatus.setText("Token received");
+                    token = response.body().getToken();
+                    Log.d("Login", "getToken token: " + token);
 
-
-                    Call<User> userCall = service.getUser(email, "Bearer " + token);
+                    Call<User> userCall = service.getUser(loginTokenRequest.getEmail(), "Bearer " + token);
                     userCall.enqueue(new Callback<User>() {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             int userStatus = response.code();
-                            User user = response.body();
+                            user = response.body();
                             Log.d("Login", "responseCode: " + userStatus);
                             Log.d("Login", "Name: " + user.getName());
                             Log.d("Login", "username: " + user.getUsername());
@@ -163,53 +141,93 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("Login", "Email: " + user.getEmail());
                             Log.d("Login", "ID: " + user.getId());
                             Log.d("Login", "TeamID: " + user.getTeamID());
-
+                            loginStatus.setText("User received: " + user.getName());
+                            User.setUser(user);
+                            startMainActivity();
 
                         }
 
                         @Override
                         public void onFailure(Call<User> call, Throwable t) {
-                            Log.d("Login","OnFailure: " +t.getMessage());
+                            Log.d("Login", "OnFailure: " + t.getMessage());
                         }
                     });
 
                 } else {
-                    loginStatus.setText("Email/PW wrong");
+                    loginStatus.setText("Token not received");
                 }
             }
 
             @Override
             public void onFailure(Call<LoginTokenResponse> call, Throwable t) {
-                Log.d("DEBUG", "OnFailure: " + t.getMessage());
+                Log.d("ERROR", "GetToken:OnFailure: " + t.getMessage());
             }
         });
-//        Log.d("DEBUG", "Login1");
-//        Log.d("DEBUG", "email: " + email);
-//        Log.d("DEBUG", "Password: " +password);
 
     }
 
-//        Call<List<User>> allUsersCall = service.getAllUsers();
-//        allUsersCall.enqueue(new Callback<List<User>>() {
-//            @Override
-//            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-//                int allUsersCallStatus = response.code();
-//                List<User> allUsers = response.body();
-//                Log.d("allUsersCall", "onResponseAllUsers: " +allUsersCallStatus);
-//                if(allUsers != null){
-//                    Log.d("allUsersCall", "size: " +allUsers.size());
-//                }
-//                else{
-//                    Log.d("allUsersCall", "allUsers is null" );
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onFailure(Call<List<User>> call, Throwable t) {
-//                Log.d("autologinAllUsers",t.getMessage());
-//            }
-//
-//        });
+    private String generateToken(final LoginTokenRequest loginTokenRequest) {
+        this.token = null;
+        Call<LoginTokenResponse> tokenResponseCall = service.getTokenAccess(loginTokenRequest);
+        tokenResponseCall.enqueue(new Callback<LoginTokenResponse>() {
+            @Override
+            public void onResponse(Call<LoginTokenResponse> call, Response<LoginTokenResponse> response) {
+//                Log.d("DEBUG","onResponse, code: " +response.code());
+                int statusCode = response.code();
+                if (statusCode == 200) {
+                    loginStatus.setText("Token received");
+                    token = response.body().getToken();
+                    Log.d("Login", "getToken token: " + token);
+                } else {
+                    loginStatus.setText("Token not received");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginTokenResponse> call, Throwable t) {
+                Log.d("ERROR", "GetToken:OnFailure: " + t.getMessage());
+            }
+        });
+        return token;
+    }
+
+    public void getUser(String e) {
+        this.user = null;
+        Call<User> userCall = service.getUser(e, "Bearer " + this.token);
+        userCall.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+                int userStatus = response.code();
+                user = response.body();
+                Log.d("Login", "responseCode: " + userStatus);
+                Log.d("Login", "Name: " + user.getName());
+                Log.d("Login", "username: " + user.getUsername());
+                Log.d("Login", "Password: " + user.getPassword());
+                Log.d("Login", "Email: " + user.getEmail());
+                Log.d("Login", "ID: " + user.getId());
+                Log.d("Login", "TeamID: " + user.getTeamID());
+                loginStatus.setText("User received: " + user.getName());
+
+
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+                Log.d("Login", "OnFailure: " + t.getMessage());
+            }
+        });
+
+        return;
+    }
+
+    public void login() {
+        LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
+        loginTokenRequest.setEmail(email);
+        loginTokenRequest.setPassword(password);
+
+        generateToken(loginTokenRequest);
+        getUser(loginTokenRequest.getEmail());
+
+    }
 
 }
