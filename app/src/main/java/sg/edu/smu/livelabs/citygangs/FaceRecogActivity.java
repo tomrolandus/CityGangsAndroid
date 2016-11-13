@@ -28,8 +28,14 @@ public class FaceRecogActivity extends AppCompatActivity {
 
     private final int PICK_IMAGE = 1;
     private ProgressDialog detectionProgressDialog;
+    private static FaceServiceClient faceServiceClient;
 
-    private FaceServiceClient faceServiceClient;
+    public static FaceServiceClient getFaceServiceClient() {
+        return faceServiceClient;
+    }
+
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_recog);
