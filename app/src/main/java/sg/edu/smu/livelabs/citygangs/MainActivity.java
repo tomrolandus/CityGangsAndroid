@@ -7,9 +7,9 @@ import android.view.View;
 import android.widget.TextView;
 
 
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
-
-
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(User.getUser() == null)
+        if (User.getUser() == null)
             startActivity(new Intent(getBaseContext(), LoginActivity.class));
 
     }
@@ -53,10 +53,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         User tmp = User.getUser();
-       
+
     }
 
-    public void startPreferencesActivity(View view){
+    public void startPreferencesActivity(View view) {
         startActivity(new Intent(getBaseContext(), PreferencesActivity.class));
+    }
+
+    public void test(View view) {
+        User user = User.getUser();
+        String personId = user.getFaceId();
+        String personGroupId = user.getGroupId();
+//        String personId = "6a3a65d8-2beb-4a57-bc24-e3079c803fbc";
+//        String personGroupId = "a145436e-03b2-4b72-8e47-f58e13ab49c7";
+        String personName = StorageHelper.getPersonName(
+                personId, personGroupId, MainActivity.this);
+
+        Intent intent = new Intent(MainActivity.this, PersonActivity.class);
+        intent.putExtra("AddNewPerson", false);
+        intent.putExtra("PersonName", personName);
+        intent.putExtra("PersonId", personId);
+        intent.putExtra("PersonGroupId", personGroupId);
+        startActivity(intent);
     }
 }

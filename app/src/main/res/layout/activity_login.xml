@@ -61,4 +61,15 @@
         android:id="@+id/btnNewUser"
         android:onClick="startCreateNewUserActivity" />
 
+    <Button
+        android:text="Add person to FaceAPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnNewUser"
+        android:layout_alignStart="@+id/btnNewUser"
+        android:layout_marginStart="19dp"
+        android:layout_marginBottom="38dp"
+        android:id="@+id/addPersonBtn"
+        android:onClick="addPerson" />
+
 </RelativeLayout>

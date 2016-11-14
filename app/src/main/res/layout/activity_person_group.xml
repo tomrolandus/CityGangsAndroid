@@ -83,7 +83,7 @@
             android:layout_marginRight="@dimen/view_margin"
             android:layout_marginEnd="@dimen/view_margin"
             android:text="@string/add_person"
-            android:onClick="addPerson"
+            android:onClick="addPerson (PersonGroupActivity)"
             style="@style/ButtonStyle" />
 
         <Button

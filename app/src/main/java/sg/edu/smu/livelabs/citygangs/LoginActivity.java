@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import retrofit2.Callback;
 import retrofit2.Response;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
 import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
 
 import android.text.Editable;
@@ -32,6 +33,7 @@ public class LoginActivity extends AppCompatActivity {
     private String email;
     private String password;
     private User user;
+    private String personGroupId = "a145436e-03b2-4b72-8e47-f58e13ab49c7";
 //    private View view;
 
     @Override
@@ -224,6 +226,22 @@ public class LoginActivity extends AppCompatActivity {
 
     public void startCreateNewUserActivity(View view){
         startActivity(new Intent(getBaseContext(), CreateNewUserActivity.class));
+    }
+
+    public void addPerson(View view) {
+
+        addPerson();
+
+    }
+
+    private void addPerson() {
+
+
+        Intent intent = new Intent(this, PersonActivity.class);
+        intent.putExtra("AddNewPerson", true);
+        intent.putExtra("PersonName", "");
+        intent.putExtra("PersonGroupId", personGroupId);
+        startActivity(intent);
     }
 
 }

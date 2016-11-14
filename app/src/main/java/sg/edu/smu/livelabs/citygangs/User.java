@@ -72,6 +72,14 @@ public class User {
     @Expose
     private int teamID;
 
+    @SerializedName("face_id")
+    @Expose
+    private String faceId;
+
+    @SerializedName("group_id")
+    @Expose
+    private String groupId;
+
 
     public User(int id, String username, String name, String email, String password, int kills, int currentDistance, int totalDistance, int teamID){
         this.id = id;
@@ -157,4 +165,19 @@ public class User {
         this.teamID = teamID;
     }
 
+    public String getFaceId() {
+        return faceId;
+    }
+
+    public void setFaceId(String face_id) {
+        this.faceId = face_id;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
+    }
 }

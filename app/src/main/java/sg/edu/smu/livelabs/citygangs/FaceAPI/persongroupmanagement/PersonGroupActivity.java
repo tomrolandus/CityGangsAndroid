@@ -41,6 +41,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -469,6 +470,7 @@ public class PersonGroupActivity extends AppCompatActivity {
 
             Set<String> personIdSet = StorageHelper.getAllPersonIds(personGroupId, PersonGroupActivity.this);
             for (String personId: personIdSet) {
+                Log.d("WHEREAREYOU",personId);
                 personIdList.add(personId);
                 personChecked.add(false);
             }
@@ -511,6 +513,7 @@ public class PersonGroupActivity extends AppCompatActivity {
 
             // set the text of the item
             String personName = StorageHelper.getPersonName(personId, personGroupId, PersonGroupActivity.this);
+            Log.d("WHEREAREYOU2",personName);
             ((TextView)convertView.findViewById(R.id.text_person)).setText(personName);
 
             // set the checked status of the item
