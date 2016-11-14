@@ -18,6 +18,16 @@ public class User {
         User.user = user;
     }
 
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     @SerializedName("id")
     @Expose
     private int id;

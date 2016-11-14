@@ -173,7 +173,7 @@ public class PhotosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_person);
+        setContentView(R.layout.activity_photos);
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {

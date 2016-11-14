@@ -197,10 +197,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".FaceAPI.ui.IdentificationActivity" />
         </activity>
-        <activity android:name=".FaceAPI.ui.Kill" />
         <activity android:name=".FaceAPI.ui.DefendTerritory" />
-        <activity android:name=".Preferences" />
-        <activity android:name=".PhotosActivity"></activity>
+        <activity android:name=".PreferencesActivity" />
+        <activity android:name=".PhotosActivity" />
+        <activity android:name=".CreateNewUserActivity"></activity>
     </application>
 
 </manifest>

@@ -37,26 +37,26 @@
             android:singleLine="false"
             android:nestedScrollingEnabled="false" />
 
-        <Button
-            android:text="Go to Login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/MainLogin"
-            android:onClick="startLoginActivity" />
+        <!--<Button-->
+            <!--android:text="Go to Login"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/MainLogin"-->
+            <!--android:onClick="startLoginActivity" />-->
 
-        <Button
-            android:text="Start Service"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnStartLogicService"
-            android:onClick="startLogicService" />
+        <!--<Button-->
+            <!--android:text="Start Service"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btnStartLogicService"-->
+            <!--android:onClick="startLogicService" />-->
 
-        <Button
-            android:text="Stop Service"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnStopLogicService"
-            android:onClick="stopLogicService" />
+        <!--<Button-->
+            <!--android:text="Stop Service"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/btnStopLogicService"-->
+            <!--android:onClick="stopLogicService" />-->
 
         <Button
             android:text="Preferences"

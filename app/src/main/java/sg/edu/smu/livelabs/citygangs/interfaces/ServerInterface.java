@@ -14,6 +14,8 @@ import retrofit2.http.POST;
 import retrofit2.http.Path;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
+import sg.edu.smu.livelabs.citygangs.Models.RegisterTokenRequest;
+import sg.edu.smu.livelabs.citygangs.Models.RegisterTokenResponse;
 import sg.edu.smu.livelabs.citygangs.User;
 
 /**
@@ -23,6 +25,9 @@ import sg.edu.smu.livelabs.citygangs.User;
 public interface ServerInterface {
     @POST("login")
     Call<LoginTokenResponse> getTokenAccess(@Body LoginTokenRequest loginTokenRequest);
+
+    @POST("register")
+    Call<RegisterTokenResponse> registerToken(@Body RegisterTokenRequest registerTokenRequest);
 
     @Headers("Accept: application/json")
     @GET("user/{email}")

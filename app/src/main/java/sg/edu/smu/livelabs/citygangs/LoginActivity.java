@@ -31,7 +31,6 @@ public class LoginActivity extends AppCompatActivity {
     private String token;
     private String email;
     private String password;
-    private TextView loginStatus;
     private User user;
 //    private View view;
 
@@ -77,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        loginStatus = (TextView) findViewById(R.id.logingStatusTV);
+
 
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
@@ -124,7 +123,6 @@ public class LoginActivity extends AppCompatActivity {
 //                Log.d("DEBUG","onResponse, code: " +response.code());
                 int statusCode = response.code();
                 if (statusCode == 200) {
-                    loginStatus.setText("Token received");
                     token = response.body().getToken();
                     Log.d("Login", "getToken token: " + token);
 
@@ -141,7 +139,6 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d("Login", "Email: " + user.getEmail());
                             Log.d("Login", "ID: " + user.getId());
                             Log.d("Login", "TeamID: " + user.getTeamID());
-                            loginStatus.setText("User received: " + user.getName());
                             User.setUser(user);
                             startMainActivity();
 
@@ -153,8 +150,6 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     });
 
-                } else {
-                    loginStatus.setText("Token not received");
                 }
             }
 
@@ -175,11 +170,8 @@ public class LoginActivity extends AppCompatActivity {
 //                Log.d("DEBUG","onResponse, code: " +response.code());
                 int statusCode = response.code();
                 if (statusCode == 200) {
-                    loginStatus.setText("Token received");
                     token = response.body().getToken();
                     Log.d("Login", "getToken token: " + token);
-                } else {
-                    loginStatus.setText("Token not received");
                 }
             }
 
@@ -206,7 +198,7 @@ public class LoginActivity extends AppCompatActivity {
                 Log.d("Login", "Email: " + user.getEmail());
                 Log.d("Login", "ID: " + user.getId());
                 Log.d("Login", "TeamID: " + user.getTeamID());
-                loginStatus.setText("User received: " + user.getName());
+
 
 
             }
@@ -220,7 +212,7 @@ public class LoginActivity extends AppCompatActivity {
         return;
     }
 
-    public void login() {
+    public void login(View view) {
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
         loginTokenRequest.setEmail(email);
         loginTokenRequest.setPassword(password);
@@ -228,6 +220,10 @@ public class LoginActivity extends AppCompatActivity {
         generateToken(loginTokenRequest);
         getUser(loginTokenRequest.getEmail());
 
+    }
+
+    public void startCreateNewUserActivity(View view){
+        startActivity(new Intent(getBaseContext(), CreateNewUserActivity.class));
     }
 
 }
