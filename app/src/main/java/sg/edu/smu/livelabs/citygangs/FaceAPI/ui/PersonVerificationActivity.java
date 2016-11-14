@@ -60,6 +60,7 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.log.VerificationLogActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonGroupListActivity;
 
+import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
 import java.io.ByteArrayInputStream;
@@ -90,7 +91,7 @@ public class PersonVerificationActivity extends AppCompatActivity {
         @Override
         protected VerifyResult doInBackground(Void... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Verifying...");
 
@@ -139,7 +140,7 @@ public class PersonVerificationActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Detecting...");
 

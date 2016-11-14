@@ -57,6 +57,7 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.log.DetectionLogActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
 import java.io.ByteArrayInputStream;
@@ -76,7 +77,7 @@ public class DetectionActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try {
                 publishProgress("Detecting...");
 

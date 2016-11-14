@@ -61,6 +61,7 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.log.IdentificationLogActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonGroupListActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
 import java.io.ByteArrayInputStream;
@@ -95,7 +96,7 @@ public class IdentificationActivity extends AppCompatActivity {
             addLog(logString);
 
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Getting person group status...");
 
@@ -254,7 +255,7 @@ public class IdentificationActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Detecting...");
 

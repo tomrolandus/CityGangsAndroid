@@ -1,14 +1,20 @@
 package sg.edu.smu.livelabs.citygangs;
 
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import retrofit2.Callback;
 import retrofit2.Response;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
 import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
 
 import android.text.Editable;
@@ -17,6 +23,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.microsoft.projectoxford.face.FaceServiceClient;
+import com.microsoft.projectoxford.face.FaceServiceRestClient;
+import com.microsoft.projectoxford.face.contract.CreatePersonResult;
 
 import java.util.List;
 
@@ -34,12 +44,19 @@ public class LoginActivity extends AppCompatActivity {
     private String password;
     private User user;
     private String personGroupId = "a145436e-03b2-4b72-8e47-f58e13ab49c7";
+    ProgressDialog progressDialog;
+    private String personId;
+    private static final int REQUEST_SELECT_IMAGE = 0;
+
 //    private View view;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+
 
         //EDITTEXT
         EditText emailET = (EditText) findViewById(R.id.enterEmail);
@@ -230,7 +247,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void addPerson(View view) {
 
-        addPerson();
+        new PersonActivity.AddPersonTask(true).execute(personGroupId);
+//        addPerson();
 
     }
 
@@ -244,4 +262,92 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+class AddPersonTask extends AsyncTask<String, String, String> {
+    // Indicate the next step is to add face in this person, or finish editing this person.
+    boolean mAddFace;
+
+    AddPersonTask (boolean addFace) {
+        mAddFace = addFace;
+    }
+
+    @Override
+    protected String doInBackground(String... params) {
+        // Get an instance of face service client.
+        FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
+        try{
+            publishProgress("Syncing with server to add person...");
+            addLog("Request: Creating Person in person group" + params[0]);
+
+            // Start the request to creating person.
+            CreatePersonResult createPersonResult = faceServiceClient.createPerson(
+                    params[0],
+                    "THIS IS A TEST",
+                    "I DONT KNOW WHAT SHOULD BE HERE");
+
+            return createPersonResult.personId.toString();
+        } catch (Exception e) {
+            publishProgress(e.getMessage());
+            addLog(e.getMessage());
+            return null;
+        }
+    }
+//
+//    @Override
+//    protected void onPreExecute() {
+//        setUiBeforeBackgroundTask();
+//    }
+//
+//    @Override
+//    protected void onProgressUpdate(String... progress) {
+//        setUiDuringBackgroundTask(progress[0]);
+//    }
+
+    @Override
+    protected void onPostExecute(String result) {
+        progressDialog.dismiss();
+
+        if (result != null) {
+            addLog("Response: Success. Person " + result + " created.");
+            personId = result;
+            setInfo("Successfully Synchronized!");
+
+            if (mAddFace) {
+                addFace();
+            } else {
+                doneAndSave();
+            }
+        }
+    }
 }
+    // Add a log item.
+    private void addLog(String log) {
+        LogHelper.addIdentificationLog(log);
+    }
+
+    // Set the information panel on screen.
+    private void setInfo(String info) {
+        TextView textView = (TextView) findViewById(R.id.info);
+        textView.setText(info);
+    }
+
+    private void addFace() {
+        setInfo("");
+        Intent intent = new Intent(this, SelectImageActivity.class);
+        startActivityForResult(intent, REQUEST_SELECT_IMAGE);
+    }
+    private void doneAndSave() {
+        TextView textWarning = (TextView)findViewById(R.id.info);
+        EditText editTextPersonName = (EditText)findViewById(R.id.edit_person_name);
+        String newPersonName = editTextPersonName.getText().toString();
+        if (newPersonName.equals("")) {
+            textWarning.setText(R.string.person_name_empty_warning_message);
+            return;
+        }
+
+//        StorageHelper.setPersonName(personId, newPersonName, personGroupId, PersonActivity.this);
+
+        finish();
+    }
+}
+

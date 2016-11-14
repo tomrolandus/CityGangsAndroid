@@ -59,6 +59,7 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
 import java.util.ArrayList;
@@ -76,7 +77,7 @@ public class PersonGroupListActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Deleting selected person groups...");
                 addLog("Request: Delete Group " + params[0]);

@@ -1,11 +1,15 @@
 package sg.edu.smu.livelabs.citygangs;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+
+import com.microsoft.projectoxford.face.FaceServiceClient;
+import com.microsoft.projectoxford.face.FaceServiceRestClient;
 
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
@@ -16,11 +20,25 @@ public class MainActivity extends AppCompatActivity {
 
     String msg = "Android : ";
     private TextView userMain;
+    private static FaceServiceClient sFaceServiceClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //CREATE THE FACESERVICE CLIENT
+        sFaceServiceClient = new FaceServiceRestClient(getString(R.string.subscription_key));
+
+        if (getString(R.string.subscription_key).startsWith("Please")) {
+            new AlertDialog.Builder(this)
+                    .setTitle(getString(R.string.add_subscription_key_tip_title))
+                    .setMessage(getString(R.string.add_subscription_key_tip))
+                    .setCancelable(false)
+                    .show();
+        }
+
+        //CHECK IF USER CONNECTED
         if (User.getUser() == null)
             startActivity(new Intent(getBaseContext(), LoginActivity.class));
 
@@ -75,5 +93,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("PersonId", personId);
         intent.putExtra("PersonGroupId", personGroupId);
         startActivity(intent);
+    }
+
+    public static FaceServiceClient getFaceServiceClient() {
+        return sFaceServiceClient;
     }
 }

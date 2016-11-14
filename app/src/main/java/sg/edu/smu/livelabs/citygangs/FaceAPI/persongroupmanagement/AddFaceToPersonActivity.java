@@ -72,6 +72,7 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
 public class AddFaceToPersonActivity extends AppCompatActivity {
@@ -85,7 +86,7 @@ public class AddFaceToPersonActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Void... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Adding face...");
                 UUID personId = UUID.fromString(mPersonId);
@@ -138,7 +139,7 @@ public class AddFaceToPersonActivity extends AppCompatActivity {
         @Override
         protected Face[] doInBackground(InputStream... params) {
             // Get an instance of face service client to detect faces in image.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Detecting...");
 

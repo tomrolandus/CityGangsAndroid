@@ -45,20 +45,11 @@ import sg.edu.smu.livelabs.citygangs.R;
 
 
 public class FaceRecogActivity extends AppCompatActivity {
-    private static FaceServiceClient sFaceServiceClient;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_face_recog);
-        sFaceServiceClient = new FaceServiceRestClient(getString(R.string.subscription_key));
 
-        if (getString(R.string.subscription_key).startsWith("Please")) {
-            new AlertDialog.Builder(this)
-                    .setTitle(getString(R.string.add_subscription_key_tip_title))
-                    .setMessage(getString(R.string.add_subscription_key_tip))
-                    .setCancelable(false)
-                    .show();
-        }
     }
 
     public void detection(View view) {
@@ -90,8 +81,6 @@ public class FaceRecogActivity extends AppCompatActivity {
         Intent intent = new Intent(this, IdentificationActivity.class);
         startActivity(intent);
     }
-    public static FaceServiceClient getFaceServiceClient() {
-        return sFaceServiceClient;
-    }
+
 
 }

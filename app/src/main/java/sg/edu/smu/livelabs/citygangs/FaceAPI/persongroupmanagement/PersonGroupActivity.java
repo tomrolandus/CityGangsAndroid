@@ -65,6 +65,7 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
 import java.util.ArrayList;
@@ -89,7 +90,7 @@ public class PersonGroupActivity extends AppCompatActivity {
             addLog("Request: Creating person group " + params[0]);
 
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Syncing with server to add person group...");
 
@@ -147,7 +148,7 @@ public class PersonGroupActivity extends AppCompatActivity {
             addLog("Request: Training group " + params[0]);
 
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Training person group...");
 
@@ -190,7 +191,7 @@ public class PersonGroupActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
             // Get an instance of face service client.
-            FaceServiceClient faceServiceClient = FaceRecogActivity.getFaceServiceClient();
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Deleting selected persons...");
                 addLog("Request: Deleting person " + params[0]);
