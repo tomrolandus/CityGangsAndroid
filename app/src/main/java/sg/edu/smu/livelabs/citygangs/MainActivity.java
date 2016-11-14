@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        userMain = (TextView) findViewById(R.id.userMainTV);
         if(User.getUser() == null)
             startActivity(new Intent(getBaseContext(), LoginActivity.class));
 
@@ -54,11 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         User tmp = User.getUser();
-        if(tmp!=null) {
-            userMain.setText(User.getUser().getName());
-        }
-        else
-            userMain.setText("null");
+       
     }
 
     public void startPreferencesActivity(View view){
