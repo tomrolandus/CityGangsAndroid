@@ -60,16 +60,25 @@ public class User {
     @Expose
     private int currentDistance;
 
+    @SerializedName("current_area")
+    @Expose
+    private int current_area;
+
     @SerializedName("total_distance")
     @Expose
     private int totalDistance;
 
+
+
     @SerializedName("kills")
     @Expose
+
     private int kills;
+
 
     @SerializedName("team_id")
     @Expose
+
     private int teamID;
 
     @SerializedName("face_id")
@@ -206,4 +215,12 @@ public class User {
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
+
+    public void setCurrent_area(int current_area) {
+        this.current_area = current_area;
+    }
+    public int getCurrent_area() {
+        return current_area;
+    }
+
 }

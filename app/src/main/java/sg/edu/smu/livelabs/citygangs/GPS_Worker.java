@@ -35,6 +35,7 @@ public class GPS_Worker extends Service {
     private List<Area> areas;
     public TextView displayText;
     public static final String BASE_URL = "http://is416app.139.59.238.27.nip.io/api/";
+    public UserArea userArea;
 
 
     @Override
@@ -53,6 +54,24 @@ public class GPS_Worker extends Service {
                 Intent i = new Intent("location_update");
                 i.putExtra("coordinates",location.getLongitude()+" "+location.getLatitude());
                 sendBroadcast(i);
+
+                double distance = distFrom(MainActivity.getMainUser().getLatitude(), MainActivity.getMainUser().getLongitude(), location.getLatitude(), location.getLongitude());
+
+                userArea = find(MainActivity.getMainUser().getId(), MainActivity.getMainUser().getCurrent_area());
+
+                if(userArea != null){
+                    userArea.setDistance(userArea.getDistance() + distance);
+                    updateDistance(userArea);
+                }
+                else{
+                   UserArea ua = new UserArea();
+                    ua.setUser_id(MainActivity.getMainUser().getCurrent_area());
+                    ua.setArea_id(MainActivity.getMainUser().getId());
+                    ua.setDistance(distance);
+                    addUserArea(ua);
+                }
+
+
                 updateUserLocation(MainActivity.getMainUser(), location.getLongitude(), location.getLatitude());
 
 
@@ -110,6 +129,84 @@ public class GPS_Worker extends Service {
             public void onFailure(Call<User> call, Throwable t) {
                 Log.d("Login", "OnFailure: " + t.getMessage());
             }
+        });
+    }
+
+    public static double distFrom(double lat1, double lng1, double lat2, double lng2) {
+        double earthRadius = 3958.75;
+        double dLat = Math.toRadians(lat2-lat1);
+        double dLng = Math.toRadians(lng2-lng1);
+        double sindLat = Math.sin(dLat / 2);
+        double sindLng = Math.sin(dLng / 2);
+        double a = Math.pow(sindLat, 2) + Math.pow(sindLng, 2)
+                * Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2));
+        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+        double dist = earthRadius * c;
+        return dist;
+    }
+
+    private void updateDistance(UserArea userArea) {
+        //this.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2lzNDE2YXBwLjEzOS41OS4yMzguMjcubmlwLmlvXC9hcGlcL2xvZ2luIiwiaWF0IjoxNDc5MjEyMjI4LCJleHAiOjE0NzkyMTU4MjgsIm5iZiI6MTQ3OTIxMjIyOCwianRpIjoiNGRjN2E3ODFkNDc5M2FlNmE5YmVhZWIwNGZkZWMwMjIifQ.FHA6BCH550UqIPh63ImixNmuaRo1F151cETmE4sJbSU";
+        token = MainActivity.getMainUser().getToken();
+        Log.d("DEBUG1","token: " +token);
+        Call<UserArea> userAreaCall = service.addDistance(userArea, "Bearer " + token);
+        userAreaCall.enqueue(new Callback<UserArea>() {
+            @Override
+            public void onResponse(Call<UserArea> call, Response<UserArea> response) {
+                int userStatus = response.code();
+                Log.d("DebugUser", "User changed");
+            }
+
+            @Override
+            public void onFailure(Call<UserArea> call, Throwable t) {
+                Log.d("Login", "OnFailure: " + t.getMessage());
+            }
+        });
+    }
+
+    public UserArea find(int user_id, int area_id){
+        //this.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2lzNDE2YXBwLjEzOS41OS4yMzguMjcubmlwLmlvXC9hcGlcL2xvZ2luIiwiaWF0IjoxNDc5MjEyMjI4LCJleHAiOjE0NzkyMTU4MjgsIm5iZiI6MTQ3OTIxMjIyOCwianRpIjoiNGRjN2E3ODFkNDc5M2FlNmE5YmVhZWIwNGZkZWMwMjIifQ.FHA6BCH550UqIPh63ImixNmuaRo1F151cETmE4sJbSU";
+        token = MainActivity.getMainUser().getToken();
+        Log.d("DEBUG1","token: " +token);
+
+        Call<UserArea> userAreaCall = service.findByUserIdAndAreaId(user_id, area_id, "Bearer " + token);
+        userAreaCall.enqueue(new Callback<UserArea>() {
+            @Override
+            public void onResponse(Call<UserArea> call, Response<UserArea> response) {
+                int userStatus = response.code();
+                Log.d("DebugUser", "User changed");
+                userArea =response.body();
+
+            }
+
+            @Override
+            public void onFailure(Call<UserArea> call, Throwable t) {
+                Log.d("Login", "OnFailure: " + t.getMessage());
+            }
+
+        });
+        return userArea;
+    }
+
+    public void addUserArea(UserArea userArea){
+        //this.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2lzNDE2YXBwLjEzOS41OS4yMzguMjcubmlwLmlvXC9hcGlcL2xvZ2luIiwiaWF0IjoxNDc5MjEyMjI4LCJleHAiOjE0NzkyMTU4MjgsIm5iZiI6MTQ3OTIxMjIyOCwianRpIjoiNGRjN2E3ODFkNDc5M2FlNmE5YmVhZWIwNGZkZWMwMjIifQ.FHA6BCH550UqIPh63ImixNmuaRo1F151cETmE4sJbSU";
+        token = MainActivity.getMainUser().getToken();
+        Log.d("DEBUG1","token: " +token);
+
+        Call<UserArea> userAreaCall = service.addUserArea(userArea, "Bearer " + token);
+        userAreaCall.enqueue(new Callback<UserArea>() {
+            @Override
+            public void onResponse(Call<UserArea> call, Response<UserArea> response) {
+                int userStatus = response.code();
+                Log.d("DebugUser", "User changed");
+
+            }
+
+            @Override
+            public void onFailure(Call<UserArea> call, Throwable t) {
+                Log.d("Login", "OnFailure: " + t.getMessage());
+            }
+
         });
     }
 }

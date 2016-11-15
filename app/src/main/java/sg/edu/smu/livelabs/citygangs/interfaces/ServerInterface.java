@@ -16,6 +16,7 @@ import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
 import sg.edu.smu.livelabs.citygangs.Models.RegisterTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.RegisterTokenResponse;
 import sg.edu.smu.livelabs.citygangs.User;
+import sg.edu.smu.livelabs.citygangs.UserArea;
 
 /**
  * Created by tomrolandus on 11/11/16.
@@ -48,6 +49,18 @@ public interface ServerInterface {
     @POST("user/update")
     Call<User> updateLocation(@Body User user,  @Header("Authorization") String authorization);
 
+    @Headers("Accept: application/json")
+    @POST("user_area/add/distance")
+    Call<UserArea> addDistance(@Body UserArea userArea, @Header("Authorization") String authorization);
+
+
+    @Headers("Accept: application/json")
+    @GET("user_area/{user_id}/{team_id}")
+    Call<UserArea> findByUserIdAndAreaId(@Path("user_id") int user_id,@Path("area_id") int area_id, @Header("Authorization") String authorization);
+
+    @Headers("Accept: application/json")
+    @POST("user_area/add")
+    Call<UserArea> addUserArea(@Body UserArea userArea, @Header("Authorization") String authorization);
 
 
     //    @Headers({"Accept: application/json",
