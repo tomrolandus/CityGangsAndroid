@@ -61,7 +61,8 @@ public class GPS_Worker extends Service {
 
 
                 if(userArea != null){
-                    userArea.setDistance(userArea.getDistance() + distance);
+                    double newDistance = userArea.getDistance() + distance;
+                    userArea.setDistance(newDistance);
                     updateDistance(userArea);
                 }
                 else{

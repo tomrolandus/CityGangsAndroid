@@ -52,7 +52,11 @@ public interface ServerInterface {
     Call<UserArea> addDistance(@Body UserArea userArea, @Header("Authorization") String authorization);
 
     @Headers("Accept: application/json")
+<<<<<<< HEAD
     @GET("user_areas/{user_id}/{area_id}")
+=======
+    @GET("user_areas/{user_id}/{team_id}")
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
     Call<UserArea> findByUserIdAndAreaId(@Path("user_id") int user_id,@Path("area_id") int area_id, @Header("Authorization") String authorization);
 
     @Headers("Accept: application/json")

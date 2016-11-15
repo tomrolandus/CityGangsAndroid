@@ -96,9 +96,29 @@
       <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="60">
               <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+=======
+            <state relative-caret-position="561">
+              <caret line="363" column="45" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Area.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/Area.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="726">
+              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+              <folding>
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,8 +146,13 @@
       <file leaf-file-name="GPS_Worker.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/GPS_Worker.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="420">
               <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+=======
+            <state relative-caret-position="683">
+              <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
               <folding />
             </state>
           </provider>
@@ -136,8 +161,13 @@
       <file leaf-file-name="ServerInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/interfaces/ServerInterface.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="356">
               <caret line="65" column="1" selection-start-line="65" selection-start-column="1" selection-end-line="65" selection-end-column="1" />
+=======
+            <state relative-caret-position="513">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
               <folding />
             </state>
           </provider>
@@ -160,12 +190,29 @@
       <file leaf-file-name="UserArea.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/UserArea.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="75">
               <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#678#679#0" expanded="true" />
                 <element signature="e#709#710#0" expanded="true" />
+=======
+            <state relative-caret-position="561">
+              <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
+                <element signature="e#506#507#0" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#698#699#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#786#787#0" expanded="true" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
               </folding>
             </state>
           </provider>
@@ -2351,8 +2398,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/User.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/interfaces/ServerInterface.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/UserArea.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/interfaces/ServerInterface.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/Area.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/GPS_Worker.java" />
       </list>
     </option>
@@ -2834,19 +2883,53 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/LoginActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/CreateNewUserActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
+=======
+        <state relative-caret-position="132">
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/CreateNewUserActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/User.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding />
+=======
+        <state relative-caret-position="1013">
+          <caret line="221" column="34" selection-start-line="221" selection-start-column="34" selection-end-line="221" selection-end-column="34" />
+          <folding>
+            <element signature="e#4233#4234#0" expanded="true" />
+            <element signature="e#4281#4282#0" expanded="true" />
+            <element signature="e#4351#4352#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/UserArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#506#507#0" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
         </state>
       </provider>
     </entry>
@@ -2858,6 +2941,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/GPS_Worker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
@@ -2870,24 +2954,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="62" column="103" selection-start-line="62" selection-start-column="103" selection-end-line="62" selection-end-column="103" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="363" column="45" selection-start-line="363" selection-start-column="45" selection-end-line="363" selection-end-column="45" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/User.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/Area.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="2400">
           <caret line="221" column="34" selection-start-line="221" selection-start-column="34" selection-end-line="221" selection-end-column="34" />
+=======
+        <state relative-caret-position="726">
+          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
           <folding>
-            <element signature="e#4233#4234#0" expanded="true" />
-            <element signature="e#4281#4282#0" expanded="true" />
-            <element signature="e#4351#4352#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/UserArea.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/interfaces/ServerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="330">
           <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding>
@@ -2951,13 +3048,23 @@
             <element signature="e#678#679#0" expanded="true" />
             <element signature="e#709#710#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="513">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/sg/edu/smu/livelabs/citygangs/GPS_Worker.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="420">
           <caret line="145" column="5" selection-start-line="145" selection-start-column="5" selection-end-line="145" selection-end-column="5" />
+=======
+        <state relative-caret-position="683">
+          <caret line="64" column="45" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+>>>>>>> cdf621aae98e53eacfe4f234649a68706c2c1f21
           <folding />
         </state>
       </provider>
