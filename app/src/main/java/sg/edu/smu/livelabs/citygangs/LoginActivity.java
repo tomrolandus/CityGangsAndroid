@@ -10,10 +10,11 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.CreatePersonResult;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -44,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
 
 
         //EDITTEXT
@@ -113,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void startMainActivity() {
+        getAllAreas();
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
         finish();
     }
@@ -347,5 +351,43 @@ public class LoginActivity extends AppCompatActivity {
     public void startTestActivity(View view) {
         startActivity(new Intent(getBaseContext(), TestActivity.class));
     }
-}
 
+    private void getAllAreas() {
+        //  this.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6XC9cL2lzNDE2YXBwLjEzOS41OS4yMzguMjcubmlwLmlvXC9hcGlcL2xvZ2luIiwiaWF0IjoxNDc5MjEyMjI4LCJleHAiOjE0NzkyMTU4MjgsIm5iZiI6MTQ3OTIxMjIyOCwianRpIjoiNGRjN2E3ODFkNDc5M2FlNmE5YmVhZWIwNGZkZWMwMjIifQ.FHA6BCH550UqIPh63ImixNmuaRo1F151cETmE4sJbSU";
+        token = MainActivity.getMainUser().getToken();
+        Log.d("DEBUG1","token: " +token);
+        Call<List<Area>> areaCall = service.getAreas( "Bearer " + token);
+        areaCall.enqueue(new Callback<List<Area>>() {
+            @Override
+            public void onResponse(Call<List<Area>> call, Response<List<Area>> response) {
+                int userStatus = response.code();
+                List<Area> areas = response.body();
+                Log.d("debug3","areas.size: " +areas.size());
+                for(Area a : areas){
+                    Log.d("debug3","Longitude: " +a.getLongitude());
+                    Log.d("debug3","latitude: " +a.getLatitude());
+                }
+
+
+//                            for(int i = 0; i< areas.size(); i++){
+//                                Area area = null;
+//                                Log.d("AREA", "responseCode: " + userStatus);
+//                                Log.d("AREA", "Id: " + area.getId());
+//                                Log.d("AREA", "longitude: " + area.getLongitude());
+//                                Log.d("AREA", "latitude: " + area.getLatitude());
+//                                Log.d("AREA", "length: " + area.getLength());
+//                                Log.d("AREA", "TeamID: " + area.getTeam_id());
+//
+//                            }
+
+
+            }
+
+            @Override
+            public void onFailure(Call<List<Area>> call, Throwable t) {
+                Log.d("Login", "OnFailure: " + t.getMessage());
+            }
+        });
+
+    }
+}

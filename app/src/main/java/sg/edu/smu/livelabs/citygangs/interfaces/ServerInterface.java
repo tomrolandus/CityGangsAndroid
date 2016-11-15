@@ -44,6 +44,10 @@ public interface ServerInterface {
     @GET("areas")
     Call<List<Area>> getAreas( @Header("Authorization") String authorization);
 
+    @Headers("Accept: application/json")
+    @POST("user/update")
+    Call<User> updateLocation(@Body User user,  @Header("Authorization") String authorization);
+
 
 
     //    @Headers({"Accept: application/json",
