@@ -60,13 +60,14 @@ public class GPS_Worker extends Service {
                 userArea = find(MainActivity.getMainUser().getId(), MainActivity.getMainUser().getCurrent_area());
 
                 if(userArea != null){
-                    userArea.setDistance(userArea.getDistance() + distance);
+                    double newDistance = userArea.getDistance() + distance;
+                    userArea.setDistance(newDistance);
                     updateDistance(userArea);
                 }
                 else{
                    UserArea ua = new UserArea();
-                    ua.setUser_id(MainActivity.getMainUser().getCurrent_area());
-                    ua.setArea_id(MainActivity.getMainUser().getId());
+                    ua.setUser_id(MainActivity.getMainUser().getId());
+                    ua.setArea_id(MainActivity.getMainUser().getCurrent_area());
                     ua.setDistance(distance);
                     addUserArea(ua);
                 }

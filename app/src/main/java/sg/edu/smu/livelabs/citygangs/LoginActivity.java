@@ -363,6 +363,7 @@ public class LoginActivity extends AppCompatActivity {
                 int userStatus = response.code();
                 List<Area> areas = response.body();
                 Log.d("debug3","areas.size: " +areas.size());
+                Area.setAreas(areas);
                 for(Area a : areas){
                     Log.d("debug3","Longitude: " +a.getLongitude());
                     Log.d("debug3","latitude: " +a.getLatitude());

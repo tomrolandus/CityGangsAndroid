@@ -13,6 +13,14 @@ public class UserArea {
     @Expose
     private int user_id;
 
+    @SerializedName("area_id")
+    @Expose
+    private int area_id;
+
+    @SerializedName("distance")
+    @Expose
+    private double distance;
+
     public int getUser_id() {
         return user_id;
     }
@@ -38,13 +46,7 @@ public class UserArea {
 
     }
 
-    @SerializedName("area_id")
-    @Expose
-    private int area_id;
 
-    @SerializedName("distance")
-    @Expose
-    private double distance;
 
 
 

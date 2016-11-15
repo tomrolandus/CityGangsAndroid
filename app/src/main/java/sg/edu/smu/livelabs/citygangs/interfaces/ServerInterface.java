@@ -50,16 +50,16 @@ public interface ServerInterface {
     Call<User> updateLocation(@Body User user,  @Header("Authorization") String authorization);
 
     @Headers("Accept: application/json")
-    @POST("user_area/add/distance")
+    @POST("user_areas/add/distance")
     Call<UserArea> addDistance(@Body UserArea userArea, @Header("Authorization") String authorization);
 
 
     @Headers("Accept: application/json")
-    @GET("user_area/{user_id}/{team_id}")
+    @GET("user_areas/{user_id}/{team_id}")
     Call<UserArea> findByUserIdAndAreaId(@Path("user_id") int user_id,@Path("area_id") int area_id, @Header("Authorization") String authorization);
 
     @Headers("Accept: application/json")
-    @POST("user_area/add")
+    @POST("user_areas/add")
     Call<UserArea> addUserArea(@Body UserArea userArea, @Header("Authorization") String authorization);
 
 
