@@ -72,6 +72,14 @@
             android:id="@+id/test"
             android:onClick="test" />
 
+        <Button
+            android:text="GPSService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/serviceBtn"
+            android:visibility="visible"
+            android:onClick="startServiceActivity" />
+
         <!--<Button android:id="@+id/btnStopService"-->
             <!--android:layout_width="fill_parent"-->
             <!--android:layout_height="wrap_content"-->

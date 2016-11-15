@@ -15,7 +15,6 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
 
-
 public class MainActivity extends AppCompatActivity {
 
     String msg = "Android : ";
@@ -67,11 +66,15 @@ public class MainActivity extends AppCompatActivity {
         stopService(new Intent(getBaseContext(), LogicService.class));
     }
 
+    // Method to start the service activity
+    public void startServiceActivity(View view) {
+        startActivity(new Intent(getBaseContext(), ServiceActivity.class));
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
         User tmp = User.getUser();
-
     }
 
     public void startPreferencesActivity(View view) {

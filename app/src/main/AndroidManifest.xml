@@ -11,6 +11,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <uses-library android:name="com.google.android.maps" />
 
@@ -200,7 +201,14 @@
         <activity android:name=".FaceAPI.ui.DefendTerritory" />
         <activity android:name=".PhotosActivity" />
         <activity android:name=".CreateNewUserActivity" />
-        <activity android:name=".PreferencesActivity"></activity>
+        <activity android:name=".PreferencesActivity" />
+        <activity
+            android:name=".ServiceActivity"
+            android:label="@string/title_activity_service"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".GPS_Worker"/>
+
     </application>
 
 </manifest>

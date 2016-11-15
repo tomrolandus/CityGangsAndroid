@@ -1,22 +1,10 @@
 package sg.edu.smu.livelabs.citygangs;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import retrofit2.Callback;
-import retrofit2.Response;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
-import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
-
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -25,16 +13,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
-import com.microsoft.projectoxford.face.FaceServiceRestClient;
 import com.microsoft.projectoxford.face.contract.CreatePersonResult;
 
-import java.util.List;
-
 import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
+import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
 
 public class LoginActivity extends AppCompatActivity {
     public static final String BASE_URL = "http://is416app.139.59.238.27.nip.io/api/";
@@ -247,7 +237,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void addPerson(View view) {
 
-        new PersonActivity.AddPersonTask(true).execute(personGroupId);
+        new AddPersonTask(true).execute(personGroupId);
 //        addPerson();
 
     }
@@ -255,11 +245,11 @@ public class LoginActivity extends AppCompatActivity {
     private void addPerson() {
 
 
-        Intent intent = new Intent(this, PersonActivity.class);
+/*        Intent intent = new Intent(this, PersonActivity.class);
         intent.putExtra("AddNewPerson", true);
         intent.putExtra("PersonName", "");
         intent.putExtra("PersonGroupId", personGroupId);
-        startActivity(intent);
+        startActivity(intent);*/
     }
 
 
