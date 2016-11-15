@@ -93,11 +93,12 @@ public class LoginActivity extends AppCompatActivity {
      * This method allows you to quickly login using the hardcoded test@example.com
      */
     public void autoLogin(View view) {
+        Log.d("LOGIN","autologin");
 
         //here i just give it the hardcoded user
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
-        loginTokenRequest.setEmail("tomrolandus@gmail.com");
-        loginTokenRequest.setPassword("test");
+        loginTokenRequest.setEmail("test@example.com");
+        loginTokenRequest.setPassword("testtest");
 
         getTokenAndUser(loginTokenRequest);
 //        generateToken(loginTokenRequest);
@@ -119,16 +120,18 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void getTokenAndUser(final LoginTokenRequest loginTokenRequest) {
+        Log.d("LOGIN","getTokenAndUser");
         this.token = null;
         Call<LoginTokenResponse> tokenResponseCall = service.getTokenAccess(loginTokenRequest);
         tokenResponseCall.enqueue(new Callback<LoginTokenResponse>() {
             @Override
             public void onResponse(Call<LoginTokenResponse> call, Response<LoginTokenResponse> response) {
+                Log.d("LOGIN","onResponse");
 //                Log.d("DEBUG","onResponse, code: " +response.code());
                 int statusCode = response.code();
                 if (statusCode == 200) {
                     token = response.body().getToken();
-                    Log.d("Login", "getToken token: " + token);
+                    Log.d("LOGIN", "getToken token: " + token);
                     Call<User> userCall = service.getUser(loginTokenRequest.getEmail(), "Bearer " + token);
                     userCall.enqueue(new Callback<User>() {
                         @Override
@@ -156,6 +159,7 @@ public class LoginActivity extends AppCompatActivity {
                     });
 
                 }
+                Log.d("LOGIN","code not 200");
             }
 
             @Override
@@ -217,6 +221,7 @@ public class LoginActivity extends AppCompatActivity {
 //    }
 
     public void login(View view) {
+        Log.d("LOGIN","login");
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
         loginTokenRequest.setEmail(email);
         loginTokenRequest.setPassword(password);

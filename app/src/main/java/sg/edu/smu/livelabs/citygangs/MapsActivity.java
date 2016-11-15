@@ -64,21 +64,25 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
         mMap = googleMap;
         ArrayList<LatLng> latLngs;
         MapResources tmp = new MapResources();
-        Log.d("MAP","tmp.getAreas.size(): " +tmp.getAreas().size());
+//        Log.d("MAP","tmp.getAreas.size(): " +tmp.getAreas().size());
         for(Area area : tmp.getAreas()){
-            Log.d("MAP","tmp.getAreas");
+//            Log.d("MAP","tmp.getAreas");
             latLngs = createSquare(new LatLng(area.getLatitude(),area.getLongitude()), area.getLength());
             PolygonOptions tmpOptions = new PolygonOptions();
 
             for(LatLng latLng : latLngs){
-                Log.d("MAP","for latLng");
+//                Log.d("MAP","for latLng");
                 tmpOptions.add(new LatLng(latLng.latitude, latLng.longitude));
-            tmpOptions.strokeColor(area.getStrokeColor());
-                Log.d("MAP","strokeColor: "+area.getStrokeColor());
+            tmpOptions.strokeColor(Color.BLACK);
+//                Log.d("MAP2","lat: "+latLng.latitude);
+//                Log.d("MAP2","long: "+latLng.longitude);
+
+//                Log.d("MAP","strokeColor: "+area.getStrokeColor());
             tmpOptions.fillColor(area.getFillColor());
-                Log.d("MAP","fillColor: " +area.getFillColor());
-            Polygon poly = mMap.addPolygon(tmpOptions);
+//                Log.d("MAP","fillColor: " +area.getFillColor());
             }
+            Polygon poly = mMap.addPolygon(tmpOptions);
+//            Log.d("MAP","tmpOptions: "+tmpOptions.getPoints().size());
 //            poly.setClickable(true);
 //            mMap.setOnPolygonClickListener(GoogleMap.OnPolygonClickListener);
         }

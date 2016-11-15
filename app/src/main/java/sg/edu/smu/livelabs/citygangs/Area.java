@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 public class Area {
-    private int[] colors = new int[]{0x65ffff00,0x50ff0000,0x5000ff00,0x500000ff};
+    private int[] colors = new int[]{0x50ffff00,0x40ff0000,0x4000ff00,0x400000ff};
 
     private Polygon poly;
 
@@ -31,7 +31,6 @@ public class Area {
     }
 
     private ArrayList<LatLng> latLngs;
-    private int teamID;
 
     public int getStrokeColor() {
         return strokeColor;
@@ -42,6 +41,9 @@ public class Area {
     }
 
     public int getFillColor() {
+        if(fillColor == 0){
+            fillColor = colors[id];
+        }
         return fillColor;
     }
 
@@ -50,20 +52,14 @@ public class Area {
     }
 
 
-    private int fillColor;
+    private int fillColor = 0;
     private int strokeColor;
 
-    public void setTeamID(int teamID) {
-        this.teamID = teamID;
-    }
 
     public Polygon getPoly() {
         return poly;
     }
 
-    public int getTeamID() {
-        return teamID;
-    }
 
     public int getId() {
         return id;
@@ -106,12 +102,13 @@ public class Area {
         this.team_id = team_id;
     }
 
-    public Area(int id, LatLng latLng){
+    public Area(int id, LatLng latLng,double length){
         latitude = latLng.latitude;
         longitude = latLng.longitude;
-        teamID = id;
+        team_id = id;
         fillColor = colors[id-1];
         strokeColor = Color.BLACK;
+        this.length  =length;
     }
 
     public Polygon getPolygon(){

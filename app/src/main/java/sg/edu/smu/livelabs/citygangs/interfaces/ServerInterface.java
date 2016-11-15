@@ -4,6 +4,7 @@ package sg.edu.smu.livelabs.citygangs.interfaces;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.Callback;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
@@ -11,6 +12,8 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 import sg.edu.smu.livelabs.citygangs.Area;
+import sg.edu.smu.livelabs.citygangs.Models.AddAreaRequest;
+import sg.edu.smu.livelabs.citygangs.Models.AddAreaResponse;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
 import sg.edu.smu.livelabs.citygangs.Models.RegisterTokenRequest;
@@ -46,7 +49,14 @@ public interface ServerInterface {
 
     @Headers("Accept: application/json")
     @POST("areas/create")
-    void createArea(@Body Area area, @Header("Authorization") String authorization);
+    Call<AddAreaResponse> addAreaArguments(@Body AddAreaRequest addAreaRequest, @Header("Authorization") String authorization);
+
+    @Headers("Accept: application/json")
+    @POST("areas/create")
+    Call<AddAreaResponse> addArea(@Body Area area, @Header("Authorization") String authorization);
+
+
+
 
 
 
