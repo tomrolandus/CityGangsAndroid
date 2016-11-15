@@ -35,7 +35,6 @@ public class UserArea {
 
     public double getDistance() {
         return distance;
-
     }
 
     @SerializedName("area_id")
@@ -45,7 +44,4 @@ public class UserArea {
     @SerializedName("distance")
     @Expose
     private double distance;
-
-
-
 }
