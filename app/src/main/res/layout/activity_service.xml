@@ -45,4 +45,14 @@ tools:context="sg.edu.smu.livelabs.citygangs.ServiceActivity">
         android:id="@+id/textView" />
 </ScrollView>
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_toStartOf="@+id/scrollView"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="79dp"
+        android:id="@+id/textView2" />
+
 </RelativeLayout>

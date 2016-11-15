@@ -475,7 +475,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="68d6385ee73ae6c4d1088f2db7748445684686a4">
+        sha1="9d7bd2b0eb63d6db168c48b93aafde190679a55a">
         <dex dex="/Users/Emil/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_24c352bfc1134f62b267a2122c826f1f423d2556/classes.dex" />
     </item>
     <item
@@ -601,7 +601,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="c3dc337a17ec889244854f9c839b85935ec8c033">
+        sha1="0991aa76ef7da96e7556be7cd6fb42c37241ed5e">
         <dex dex="/Users/Emil/CityGangsAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2c4be63a813c3c76f1b5b5a6b7781d1cece5f919/classes.dex" />
     </item>
     <item

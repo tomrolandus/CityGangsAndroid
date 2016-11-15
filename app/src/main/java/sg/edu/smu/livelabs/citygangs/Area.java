@@ -1,11 +1,12 @@
 package sg.edu.smu.livelabs.citygangs;
 
-import android.graphics.Color;
-
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polygon;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by tomrolandus on 11/11/16.
@@ -18,6 +19,9 @@ public class Area {
     public ArrayList<LatLng> getLatLngs() {
         return latLngs;
     }
+
+    public List<Area> areas;
+    //public List<Area> getAreas() {return areas; }
 
     public void setLatLngs(ArrayList<LatLng> latLngs) {
         this.latLngs = latLngs;
@@ -42,10 +46,62 @@ public class Area {
         this.fillColor = fillColor;
     }
 
+
     private int fillColor;
     private int strokeColor;
 
+    public void setTeamID(int teamID) {
+        this.teamID = teamID;
+    }
 
+    public Polygon getPoly() {
+        return poly;
+    }
+
+    public int getTeamID() {
+        return teamID;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public double getLength() {
+        return length;
+    }
+
+    public int getTeam_id() {
+        return team_id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLength(double length) {
+        this.length = length;
+    }
+
+    public void setTeam_id(int team_id) {
+        this.team_id = team_id;
+    }
 
     public Area(int id, ArrayList<LatLng> c, int f, int s){
         latLngs = c;
@@ -57,4 +113,25 @@ public class Area {
     public Polygon getPolygon(){
         return poly;
     }
+
+    @SerializedName("id")
+    @Expose
+    private int id;
+
+    @SerializedName("longitude")
+    @Expose
+    private double longitude;
+
+    @SerializedName("latitude")
+    @Expose
+    private double latitude;
+
+    @SerializedName("length")
+    @Expose
+    private double length;
+
+    @SerializedName("team_id")
+    @Expose
+    private int team_id;
 }
+
