@@ -46,7 +46,7 @@ public class ServiceActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_service);
 
         btn_start = (Button) findViewById(R.id.button);
         btn_stop = (Button) findViewById(R.id.button2);
@@ -61,7 +61,7 @@ public class ServiceActivity extends Activity {
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i =new Intent(getApplicationContext(),GPS_Worker.class);
+                Intent i = new Intent(getApplicationContext(),GPS_Worker.class);
                 startService(i);
             }
         });
