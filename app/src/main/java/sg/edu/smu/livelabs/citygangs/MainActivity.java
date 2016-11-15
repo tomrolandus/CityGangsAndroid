@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
     public static FaceServiceClient getFaceServiceClient() {
         return sFaceServiceClient;
     }
-<<<<<<< HEAD
+
 
     public static String getEmail() {
         return email;
@@ -133,6 +133,4 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.mainUser = mainUser;
     }
 }
-=======
-}
->>>>>>> origin/Emil
+

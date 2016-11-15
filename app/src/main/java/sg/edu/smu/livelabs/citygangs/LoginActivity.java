@@ -21,6 +21,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
@@ -238,19 +239,13 @@ public class LoginActivity extends AppCompatActivity {
     private void addPerson() {
 
 
-<<<<<<< HEAD
+
 //        Intent intent = new Intent(this, PersonActivity.class);
 //        intent.putExtra("AddNewPerson", true);
 //        intent.putExtra("PersonName", "");
 //        intent.putExtra("PersonGroupId", personGroupId);
 //        startActivity(intent);
-=======
-/*        Intent intent = new Intent(this, PersonActivity.class);
-        intent.putExtra("AddNewPerson", true);
-        intent.putExtra("PersonName", "");
-        intent.putExtra("PersonGroupId", personGroupId);
-        startActivity(intent);*/
->>>>>>> origin/Emil
+
     }
 
 

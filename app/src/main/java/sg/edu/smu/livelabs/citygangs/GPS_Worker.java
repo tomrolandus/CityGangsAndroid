@@ -9,7 +9,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.provider.Settings;
-import android.support.annotation.Nullable;
+//import android.support.annotation.Nullable;
 import android.widget.TextView;
 
 import java.util.List;
@@ -29,7 +29,7 @@ public class GPS_Worker extends Service {
     private List<Area> areas;
     public TextView displayText;
 
-    @Nullable
+
     @Override
     public IBinder onBind(Intent intent) {
         return null;

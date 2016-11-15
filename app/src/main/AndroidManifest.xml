@@ -200,7 +200,8 @@
         </activity>
         <activity android:name=".FaceAPI.ui.DefendTerritory" />
         <activity android:name=".PhotosActivity" />
-<<<<<<< HEAD
+
+
         <activity
             android:name=".CreateNewUserActivity"
             android:parentActivityName=".EnterEmailActivity" />
@@ -211,17 +212,7 @@
             android:name=".EnterEmailActivity"
             android:parentActivityName=".LoginActivity" />
         <activity android:name=".FaceAPI.ui.IdentificationActivity2"></activity>
-=======
-        <activity android:name=".CreateNewUserActivity" />
-        <activity android:name=".PreferencesActivity" />
-        <activity
-            android:name=".ServiceActivity"
-            android:label="@string/title_activity_service"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
-        <service android:name=".GPS_Worker"/>
-
->>>>>>> origin/Emil
+        <activity android:name=".ServiceActivity"></activity>
     </application>
 
 </manifest>
