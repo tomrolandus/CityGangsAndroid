@@ -96,8 +96,8 @@ public class LoginActivity extends AppCompatActivity {
 
         //here i just give it the hardcoded user
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
-        loginTokenRequest.setEmail("test@example.com");
-        loginTokenRequest.setPassword("testtest");
+        loginTokenRequest.setEmail("tomrolandus@gmail.com");
+        loginTokenRequest.setPassword("test");
 
         getTokenAndUser(loginTokenRequest);
 //        generateToken(loginTokenRequest);

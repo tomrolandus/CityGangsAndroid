@@ -1,86 +1,216 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_login"
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:id="@+id/activity_login"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--tools:context="sg.edu.smu.livelabs.citygangs.LoginActivity">-->
+
+    <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType="textPassword"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_below="@+id/enterEmail"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignEnd="@+id/enterEmail"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/enterPassword"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint="Enter password" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Login"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:onClick="login"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignTop="@+id/enterEmail"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_toEndOf="@+id/enterEmail"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginStart="21dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="16dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/loginBtn" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="AutoLogin"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:onClick="autoLogin"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/AutoLogin"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentBottom="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginBottom="42dp" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<EditText&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:ems="10"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="11dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/enterEmail"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentTop="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentStart="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:hint="email@example.com"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:inputType="textEmailAddress" /> &ndash;&gt;-->
+
+    <!--<Button-->
+        <!--android:text="Create a new User"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/AutoLogin"-->
+        <!--android:layout_alignEnd="@+id/AutoLogin"-->
+        <!--android:id="@+id/btnNewUser"-->
+        <!--android:onClick="startEnterEmailActivity" />-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Add person to FaceAPI"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_above="@+id/btnNewUser"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignStart="@+id/btnNewUser"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginStart="19dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginBottom="38dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/addPersonBtn"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:onClick="addPerson" />&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="test"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_above="@+id/addPersonBtn"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignEnd="@+id/enterPassword"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginEnd="19dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginBottom="44dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/test"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:onClick="startTestActivity" />&ndash;&gt;-->
+
+<!--</RelativeLayout>-->
+
+
+    <!-- Copyright (c) Microsoft. All rights reserved. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:orientation="vertical"
+tools:context="sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="sg.edu.smu.livelabs.citygangs.LoginActivity">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/view_margin" >
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:layout_below="@+id/enterEmail"
-        android:layout_alignEnd="@+id/enterEmail"
-        android:id="@+id/enterPassword"
-        android:hint="Enter password" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_weight="0.49"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/enterEmail"
+            android:gravity="center_vertical"
+            android:hint="email@example.com"
+            android:inputType="textEmailAddress" />
+
+
+
+    </ScrollView>
+
 
     <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Login"
+        android:layout_weight="0.2"
+        android:layout_marginLeft="@dimen/view_margin"
+        android:layout_marginStart="@dimen/view_margin"
         android:onClick="login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/enterEmail"
-        android:layout_toEndOf="@+id/enterEmail"
-        android:layout_marginStart="21dp"
-        android:layout_marginTop="16dp"
-        android:id="@+id/loginBtn" />
+        style="@style/ButtonStyle" />
 
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.32"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/view_margin" >
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="54dp" >
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:layout_below="@+id/enterEmail"
+                android:layout_alignEnd="@+id/enterEmail"
+                android:id="@+id/enterPassword"
+                android:hint="Enter password" />
+
+
+        </ScrollView>
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal" >
     <Button
-        android:text="AutoLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:onClick="autoLogin"
-        android:id="@+id/AutoLogin"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="42dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="11dp"
-        android:id="@+id/enterEmail"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:hint="email@example.com"
-        android:inputType="textEmailAddress" />
-
-    <Button
+        android:layout_gravity="center"
         android:text="Create a new User"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/AutoLogin"
-        android:layout_alignEnd="@+id/AutoLogin"
+        android:layout_weight="1"
         android:id="@+id/btnNewUser"
+        android:layout_marginLeft="@dimen/view_margin"
+        android:layout_marginStart="@dimen/view_margin"
+        style="@style/ButtonStyle"
         android:onClick="startEnterEmailActivity" />
 
-    <Button
-        android:text="Add person to FaceAPI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnNewUser"
-        android:layout_alignStart="@+id/btnNewUser"
-        android:layout_marginStart="19dp"
-        android:layout_marginBottom="38dp"
-        android:id="@+id/addPersonBtn"
-        android:onClick="addPerson" />
 
-    <Button
-        android:text="test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/addPersonBtn"
-        android:layout_alignEnd="@+id/enterPassword"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="44dp"
-        android:id="@+id/test"
-        android:onClick="startTestActivity" />
+</LinearLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/view_margin" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AutoLogin"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/view_margin"
+            android:layout_marginStart="@dimen/view_margin"
+            style="@style/ButtonStyle"
+            android:onClick="autoLogin" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

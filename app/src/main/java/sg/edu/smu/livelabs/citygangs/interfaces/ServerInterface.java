@@ -44,6 +44,10 @@ public interface ServerInterface {
     @GET("areas")
     Call<List<Area>> getAreas( @Header("Authorization") String authorization);
 
+    @Headers("Accept: application/json")
+    @POST("areas/create")
+    void createArea(@Body Area area, @Header("Authorization") String authorization);
+
 
 
     //    @Headers({"Accept: application/json",

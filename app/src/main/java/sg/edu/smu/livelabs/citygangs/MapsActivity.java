@@ -32,6 +32,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
 public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLocationButtonClickListener, OnMapReadyCallback, ActivityCompat.OnRequestPermissionsResultCallback {
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     private boolean mPermissionDenied = false;
@@ -60,15 +62,23 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        ArrayList<LatLng> latLngs;
         MapResources tmp = new MapResources();
+        Log.d("MAP","tmp.getAreas.size(): " +tmp.getAreas().size());
         for(Area area : tmp.getAreas()){
+            Log.d("MAP","tmp.getAreas");
+            latLngs = createSquare(new LatLng(area.getLatitude(),area.getLongitude()), area.getLength());
             PolygonOptions tmpOptions = new PolygonOptions();
-            for(LatLng latLng : area.getLatLngs()){
-                tmpOptions.add(latLng);
-            }
+
+            for(LatLng latLng : latLngs){
+                Log.d("MAP","for latLng");
+                tmpOptions.add(new LatLng(latLng.latitude, latLng.longitude));
             tmpOptions.strokeColor(area.getStrokeColor());
+                Log.d("MAP","strokeColor: "+area.getStrokeColor());
             tmpOptions.fillColor(area.getFillColor());
+                Log.d("MAP","fillColor: " +area.getFillColor());
             Polygon poly = mMap.addPolygon(tmpOptions);
+            }
 //            poly.setClickable(true);
 //            mMap.setOnPolygonClickListener(GoogleMap.OnPolygonClickListener);
         }
@@ -79,6 +89,16 @@ public class MapsActivity extends AppCompatActivity implements GoogleMap.OnMyLoc
         enableMyLocation();
 
 
+    }
+
+    public ArrayList<LatLng> createSquare(LatLng iLatLng, double length){
+        Log.d("MAP","createSquare");
+        ArrayList<LatLng> latLgns = new ArrayList<LatLng>();
+        latLgns.add(iLatLng);
+        latLgns.add(new LatLng(iLatLng.latitude, iLatLng.longitude + length));
+        latLgns.add(new LatLng(iLatLng.latitude + length, iLatLng.longitude + length));
+        latLgns.add(new LatLng(iLatLng.latitude + length, iLatLng.longitude));
+        return latLgns;
     }
 
     @Override

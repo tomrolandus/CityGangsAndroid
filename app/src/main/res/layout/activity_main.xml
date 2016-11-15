@@ -1,90 +1,252 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingBottom="@dimen/activity_vertical_margin"-->
+    <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
+    <!--android:paddingTop="@dimen/activity_vertical_margin"-->
+    <!--tools:context="sg.edu.smu.livelabs.citygangs.MainActivity">-->
+
+    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="Hello World!" />&ndash;&gt;-->
+
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_alignParentStart="true">-->
+        <!--&lt;!&ndash;<Button android:id="@+id/btnStartMapsActivity"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="MAP"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startMapsActivity"/>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btnStartFaceRecogActivity"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="277dp"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="@string/open_face_recog"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startFaceRecogActivity"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_gravity="center_horizontal"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:singleLine="false"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:nestedScrollingEnabled="false" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Go to Login"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/MainLogin"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startLoginActivity" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Start Service"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btnStartLogicService"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startLogicService" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Stop Service"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btnStopLogicService"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="stopLogicService" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="Preferences"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/btnPreferences"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startPreferencesActivity" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="test"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/test"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="test" />&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="GPSService"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/serviceBtn"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:visibility="visible"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="startServiceActivity" />&ndash;&gt;-->
+
+        <!--<Button-->
+            <!--android:text="Kill Enemy!"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/killEnemyBtn"-->
+            <!--android:visibility="visible"-->
+            <!--android:onClick="startKillEnemyActivity" />-->
+
+        <!--&lt;!&ndash;<Button android:id="@+id/btnStopService"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="fill_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="@string/stop_service"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:onClick="stopService" />&ndash;&gt;-->
+    <!--</LinearLayout>-->
+
+<!--</RelativeLayout>-->
+
+    <!-- Copyright (c) Microsoft. All rights reserved. -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+android:paddingRight="@dimen/activity_horizontal_margin"
+android:paddingTop="@dimen/activity_vertical_margin"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:orientation="vertical"
+tools:context="sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity">
+
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="sg.edu.smu.livelabs.citygangs.MainActivity">
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/view_margin" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!--<ScrollView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent" >-->
+
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/detection_description" />-->
+
+    <!--</ScrollView>-->
+
+    <Button
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_gravity="center"
+        android:text="MAP"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/view_margin"
+        android:layout_marginStart="@dimen/view_margin"
+        android:onClick="startMapsActivity"
+        style="@style/ButtonStyle" />
 
+</LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
-        <Button android:id="@+id/btnStartMapsActivity"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/open_maps"
-            android:onClick="startMapsActivity"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/view_margin" >
 
-        <Button
-            android:id="@+id/btnStartFaceRecogActivity"
-            android:layout_width="277dp"
-            android:layout_height="wrap_content"
-            android:text="@string/open_face_recog"
-            android:onClick="startFaceRecogActivity"
-            android:layout_gravity="center_horizontal"
-            android:singleLine="false"
-            android:nestedScrollingEnabled="false" />
+    <!--<ScrollView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent" >-->
 
-        <!--<Button-->
-            <!--android:text="Go to Login"-->
+        <!--<TextView-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/MainLogin"-->
-            <!--android:onClick="startLoginActivity" />-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/verification_description" />-->
 
-        <!--<Button-->
-            <!--android:text="Start Service"-->
+    <!--</ScrollView>-->
+
+
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="GPS Service"
+        android:layout_weight="1"
+        android:id="@+id/serviceBtn"
+        android:layout_marginLeft="@dimen/view_margin"
+        android:layout_marginStart="@dimen/view_margin"
+        android:onClick="startServiceActivity"
+        style="@style/ButtonStyle" />
+
+</LinearLayout>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal" >
+
+    <!--<ScrollView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent" >-->
+
+        <!--<TextView-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/btnStartLogicService"-->
-            <!--android:onClick="startLogicService" />-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/kill" />-->
 
-        <!--<Button-->
-            <!--android:text="Stop Service"-->
+    <!--</ScrollView>-->
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Kill Enemy!"
+        android:id="@+id/killEnemyBtn"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/view_margin"
+        android:layout_marginStart="@dimen/view_margin"
+        style="@style/ButtonStyle"
+        android:onClick="startKillEnemyActivity" />
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/view_margin" >
+
+    <!--<ScrollView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="match_parent" >-->
+
+        <!--<TextView-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content"-->
-            <!--android:id="@+id/btnStopLogicService"-->
-            <!--android:onClick="stopLogicService" />-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:text="@string/identification_description" />-->
 
-        <Button
-            android:text="Preferences"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnPreferences"
-            android:onClick="startPreferencesActivity" />
+    <!--</ScrollView>-->
 
-        <Button
-            android:text="test"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/test"
-            android:onClick="test" />
+    <!--<Button-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:text="@string/identification"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_marginLeft="@dimen/view_margin"-->
+        <!--android:layout_marginStart="@dimen/view_margin"-->
+        <!--android:onClick="identification"-->
+        <!--style="@style/ButtonStyle" />-->
 
-        <Button
-            android:text="GPSService"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/serviceBtn"
-            android:visibility="visible"
-            android:onClick="startServiceActivity" />
+</LinearLayout>
 
-        <!--<Button android:id="@+id/btnStopService"-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="@string/stop_service"-->
-            <!--android:onClick="stopService" />-->
-    </LinearLayout>
+</LinearLayout>
 
-</RelativeLayout>

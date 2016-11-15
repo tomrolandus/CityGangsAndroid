@@ -1,5 +1,7 @@
 package sg.edu.smu.livelabs.citygangs;
 
+import android.graphics.Color;
+
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polygon;
 import com.google.gson.annotations.Expose;
@@ -13,6 +15,7 @@ import java.util.List;
  */
 
 public class Area {
+    private int[] colors = new int[]{0x65ffff00,0x50ff0000,0x5000ff00,0x500000ff};
 
     private Polygon poly;
 
@@ -103,11 +106,12 @@ public class Area {
         this.team_id = team_id;
     }
 
-    public Area(int id, ArrayList<LatLng> c, int f, int s){
-        latLngs = c;
+    public Area(int id, LatLng latLng){
+        latitude = latLng.latitude;
+        longitude = latLng.longitude;
         teamID = id;
-        fillColor = f;
-        strokeColor = s;
+        fillColor = colors[id-1];
+        strokeColor = Color.BLACK;
     }
 
     public Polygon getPolygon(){

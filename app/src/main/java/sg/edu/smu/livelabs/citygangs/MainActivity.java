@@ -16,6 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.IdentificationActivity2;
 import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
 
 public class MainActivity extends AppCompatActivity {
@@ -131,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
 
     public static void setMainUser(User mainUser) {
         MainActivity.mainUser = mainUser;
+    }
+
+    public void startKillEnemyActivity(View view){
+        startActivity(new Intent(getBaseContext(), IdentificationActivity2.class));
     }
 }
 
