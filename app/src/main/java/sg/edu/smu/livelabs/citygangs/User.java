@@ -60,16 +60,25 @@ public class User {
     @Expose
     private int currentDistance;
 
+    @SerializedName("current_area")
+    @Expose
+    private int current_area;
+
     @SerializedName("total_distance")
     @Expose
     private int totalDistance;
 
+
+
     @SerializedName("kills")
     @Expose
+
     private int kills;
+
 
     @SerializedName("team_id")
     @Expose
+
     private int teamID;
 
     @SerializedName("face_id")
@@ -80,8 +89,32 @@ public class User {
     @Expose
     private String groupId;
 
+    @SerializedName("longitude")
+    @Expose
+    private double longitude;
 
-    public User(int id, String username, String name, String email, String password, int kills, int currentDistance, int totalDistance, int teamID){
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    @SerializedName("latitude")
+    @Expose
+    private double latitude;
+
+
+    public User(int id, String username, String name, String email, String password, int kills, int currentDistance, int totalDistance, double longitude, double latitude, int teamID){
         this.id = id;
         this.username = username;
         this.name = name;
@@ -90,6 +123,8 @@ public class User {
         this.kills = kills;
         this.currentDistance = currentDistance;
         this.totalDistance = totalDistance;
+        this.longitude = longitude;
+        this.latitude = latitude;
         this.teamID = teamID;
     }
 
@@ -180,4 +215,12 @@ public class User {
     public void setGroupId(String groupId) {
         this.groupId = groupId;
     }
+
+    public void setCurrent_area(int current_area) {
+        this.current_area = current_area;
+    }
+    public int getCurrent_area() {
+        return current_area;
+    }
+
 }

@@ -23,8 +23,15 @@ public class Area {
         return latLngs;
     }
 
-    public List<Area> areas;
-    //public List<Area> getAreas() {return areas; }
+    public static List<Area> areas;
+
+    public static List<Area> getAreas() {
+        return areas;
+    }
+
+    public static void setAreas(List<Area> areas) {
+        Area.areas = areas;
+    }
 
     public void setLatLngs(ArrayList<LatLng> latLngs) {
         this.latLngs = latLngs;

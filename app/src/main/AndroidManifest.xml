@@ -213,6 +213,11 @@
             android:parentActivityName=".LoginActivity" />
         <activity android:name=".FaceAPI.ui.IdentificationActivity2"></activity>
         <activity android:name=".ServiceActivity"></activity>
+
+        <service
+            android:name=".GPS_Worker"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
