@@ -60,18 +60,17 @@ import android.widget.TextView;
 
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.CreatePersonResult;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
-import sg.edu.smu.livelabs.citygangs.MainActivity;
-import sg.edu.smu.livelabs.citygangs.R;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
+
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
+import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.SelectImageActivity;
+import sg.edu.smu.livelabs.citygangs.MainActivity;
+import sg.edu.smu.livelabs.citygangs.R;
 
 
 public class PersonActivity extends AppCompatActivity {

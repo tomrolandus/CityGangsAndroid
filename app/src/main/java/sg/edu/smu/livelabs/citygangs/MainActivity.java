@@ -18,7 +18,6 @@ import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivit
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
 import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
 
-
 public class MainActivity extends AppCompatActivity {
 
     String msg = "Android : ";
@@ -77,11 +76,15 @@ public class MainActivity extends AppCompatActivity {
         stopService(new Intent(getBaseContext(), LogicService.class));
     }
 
+    // Method to start the service activity
+    public void startServiceActivity(View view) {
+        startActivity(new Intent(getBaseContext(), ServiceActivity.class));
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
         User tmp = User.getUser();
-
     }
 
     public void startPreferencesActivity(View view) {
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     public static FaceServiceClient getFaceServiceClient() {
         return sFaceServiceClient;
     }
+<<<<<<< HEAD
 
     public static String getEmail() {
         return email;
@@ -129,3 +133,6 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.mainUser = mainUser;
     }
 }
+=======
+}
+>>>>>>> origin/Emil

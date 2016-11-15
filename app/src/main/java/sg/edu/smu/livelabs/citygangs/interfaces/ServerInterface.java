@@ -1,8 +1,6 @@
 package sg.edu.smu.livelabs.citygangs.interfaces;
 
 
-
-
 import java.util.List;
 
 import retrofit2.Call;
@@ -12,6 +10,7 @@ import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import sg.edu.smu.livelabs.citygangs.Area;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenRequest;
 import sg.edu.smu.livelabs.citygangs.Models.LoginTokenResponse;
 import sg.edu.smu.livelabs.citygangs.Models.RegisterTokenRequest;
@@ -34,8 +33,17 @@ public interface ServerInterface {
     Call<User> getUser(@Path("email") String email, @Header("Authorization") String authorization);
 
     @Headers("Accept: application/json")
+<<<<<<< HEAD
     @GET("users/face/{face_id}")
     Call<User> getUserByFaceId(@Path("face_id") String faceId, @Header("Authorization") String authorization);
+=======
+    @GET("areas/{id}")
+    Call<Area> getArea(@Path("id") int id, @Header("Authorization") String authorization);
+
+    @Headers("Accept: application/json")
+    @GET("areas")
+    Call<List<Area>> getAreas( @Header("Authorization") String authorization);
+>>>>>>> origin/Emil
 
 
 
