@@ -30,6 +30,8 @@
     <string name="grouping_description">Group faces based on similarity.</string>
     <string name="find_similar_face_description">Search for similar-looking faces.</string>
     <string name="identification_description">Identify the person from a face.</string>
+    <string name="personGroupId">c145436e-03b2-4b72-8e47-f58e13ab49c7</string>
+    <!--<string name="personGroupId">a145436e-03b2-4b72-8e47-f58e13ab49c7</string>-->
 
     <!-- Tips to get subscription key shown on main activity-->
 

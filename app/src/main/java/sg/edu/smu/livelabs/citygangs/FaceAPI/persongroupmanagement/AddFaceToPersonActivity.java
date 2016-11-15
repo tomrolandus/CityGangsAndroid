@@ -40,6 +40,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,6 +79,7 @@ import sg.edu.smu.livelabs.citygangs.R;
 public class AddFaceToPersonActivity extends AppCompatActivity {
     // Background task of adding a face to person.
     class AddFaceTask extends AsyncTask<Void, String, Boolean> {
+
         List<Integer> mFaceIndices;
         AddFaceTask(List<Integer> faceIndices) {
             mFaceIndices = faceIndices;
@@ -85,11 +87,13 @@ public class AddFaceToPersonActivity extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... params) {
+            Log.d("debug5","doInBackground");
             // Get an instance of face service client to detect faces in image.
             FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
                 publishProgress("Adding face...");
                 UUID personId = UUID.fromString(mPersonId);
+                Log.d("debug5","UUID: ");
 
                 ByteArrayOutputStream stream = new ByteArrayOutputStream();
                 mBitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);

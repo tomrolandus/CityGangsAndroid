@@ -63,7 +63,7 @@ public class FaceRecogActivity extends AppCompatActivity {
     }
 
     public void defendTerritory(View view){
-        Intent intent = new Intent(this, DefendTerritory.class);
+        Intent intent = new Intent(this, IdentificationActivity2.class);
         startActivity(intent);
     }
 

@@ -11,9 +11,12 @@ import android.widget.TextView;
 import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.FaceServiceRestClient;
 
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
+import sg.edu.smu.livelabs.citygangs.interfaces.ServerInterface;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,11 +24,18 @@ public class MainActivity extends AppCompatActivity {
     String msg = "Android : ";
     private TextView userMain;
     private static FaceServiceClient sFaceServiceClient;
+    private static String email;
+    public static final String BASE_URL = "http://is416app.139.59.238.27.nip.io/api/";
+    private static ServerInterface service;
+    private static User mainUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
+        service = retrofit.create(ServerInterface.class);
 
         //CREATE THE FACESERVICE CLIENT
         sFaceServiceClient = new FaceServiceRestClient(getString(R.string.subscription_key));
@@ -39,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //CHECK IF USER CONNECTED
-        if (User.getUser() == null)
+        if (mainUser == null)
             startActivity(new Intent(getBaseContext(), LoginActivity.class));
 
     }
@@ -97,5 +107,25 @@ public class MainActivity extends AppCompatActivity {
 
     public static FaceServiceClient getFaceServiceClient() {
         return sFaceServiceClient;
+    }
+
+    public static String getEmail() {
+        return email;
+    }
+
+    public static void setEmail(String email) {
+        MainActivity.email = email;
+    }
+
+    public static ServerInterface getService() {
+        return service;
+    }
+
+    public static User getMainUser() {
+        return mainUser;
+    }
+
+    public static void setMainUser(User mainUser) {
+        MainActivity.mainUser = mainUser;
     }
 }

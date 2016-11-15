@@ -11,58 +11,58 @@
     android:orientation="vertical"
     tools:context="sg.edu.smu.livelabs.citygangs.CreateNewUserActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="0dp" >
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_marginBottom="0dp" >-->
 
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent" >
+    <!--<ScrollView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_height="match_parent" >-->
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:gravity="center_vertical"
-                android:text="Email:"
-                android:id="@+id/emailTV" />
-
-
-        </ScrollView>
+    <!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="bottom"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:text="Email:"-->
+    <!--android:id="@+id/emailTV" />-->
 
 
+    <!--</ScrollView>-->
 
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/view_margin" >
 
-        <ScrollView
-            android:layout_width="0dp"
-            android:layout_weight="0.5"
-            android:layout_height="match_parent"
-            android:layout_gravity="top">
+    <!--</LinearLayout>-->
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:inputType="textEmailAddress"
-                android:id="@+id/emailET"
-                android:hint="email@example.com" />
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="0.2"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:layout_marginBottom="@dimen/view_margin" >-->
 
-        </ScrollView>
+    <!--<ScrollView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_weight="0.5"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="top">-->
 
-    </LinearLayout>
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:inputType="textEmailAddress"-->
+    <!--android:id="@+id/emailET"-->
+    <!--android:hint="email@example.com" />-->
+
+    <!--</ScrollView>-->
+
+    <!--</LinearLayout>-->
 
 
     <LinearLayout

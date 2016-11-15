@@ -42,7 +42,6 @@ public class LoginActivity extends AppCompatActivity {
     private String token;
     private String email;
     private String password;
-    private User user;
     private String personGroupId = "a145436e-03b2-4b72-8e47-f58e13ab49c7";
     ProgressDialog progressDialog;
     private String personId;
@@ -54,8 +53,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
 
 
         //EDITTEXT
@@ -96,8 +93,6 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-
-
         Retrofit retrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         service = retrofit.create(ServerInterface.class);
 
@@ -134,7 +129,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void getTokenAndUser(final LoginTokenRequest loginTokenRequest) {
         this.token = null;
-        this.user = null;
         Call<LoginTokenResponse> tokenResponseCall = service.getTokenAccess(loginTokenRequest);
         tokenResponseCall.enqueue(new Callback<LoginTokenResponse>() {
             @Override
@@ -144,21 +138,22 @@ public class LoginActivity extends AppCompatActivity {
                 if (statusCode == 200) {
                     token = response.body().getToken();
                     Log.d("Login", "getToken token: " + token);
-
                     Call<User> userCall = service.getUser(loginTokenRequest.getEmail(), "Bearer " + token);
                     userCall.enqueue(new Callback<User>() {
                         @Override
                         public void onResponse(Call<User> call, Response<User> response) {
                             int userStatus = response.code();
-                            user = response.body();
-                            Log.d("Login", "responseCode: " + userStatus);
-                            Log.d("Login", "Name: " + user.getName());
-                            Log.d("Login", "username: " + user.getUsername());
-                            Log.d("Login", "Password: " + user.getPassword());
-                            Log.d("Login", "Email: " + user.getEmail());
-                            Log.d("Login", "ID: " + user.getId());
-                            Log.d("Login", "TeamID: " + user.getTeamID());
-                            User.setUser(user);
+                            User user = response.body();
+                            user.setToken(token);
+//                            Log.d("Login", "responseCode: " + userStatus);
+//                            Log.d("Login", "Name: " + user.getName());
+//                            Log.d("Login", "username: " + user.getUsername());
+//                            Log.d("Login", "Password: " + user.getPassword());
+//                            Log.d("Login", "Email: " + user.getEmail());
+//                            Log.d("Login", "ID: " + user.getId());
+//                            Log.d("Login", "TeamID: " + user.getTeamID());
+                            MainActivity.setMainUser(user);
+
                             startMainActivity();
 
                         }
@@ -202,52 +197,50 @@ public class LoginActivity extends AppCompatActivity {
         return token;
     }
 
-    public void getUser(String e) {
-        this.user = null;
-        Call<User> userCall = service.getUser(e, "Bearer " + this.token);
-        userCall.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-                int userStatus = response.code();
-                user = response.body();
-                Log.d("Login", "responseCode: " + userStatus);
-                Log.d("Login", "Name: " + user.getName());
-                Log.d("Login", "username: " + user.getUsername());
-                Log.d("Login", "Password: " + user.getPassword());
-                Log.d("Login", "Email: " + user.getEmail());
-                Log.d("Login", "ID: " + user.getId());
-                Log.d("Login", "TeamID: " + user.getTeamID());
-
-
-
-            }
-
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-                Log.d("Login", "OnFailure: " + t.getMessage());
-            }
-        });
-
-        return;
-    }
+//    public void getUser(String e) {
+//        this.user = null;
+//        Call<User> userCall = service.getUser(e, "Bearer " + this.token);
+//        userCall.enqueue(new Callback<User>() {
+//            @Override
+//            public void onResponse(Call<User> call, Response<User> response) {
+//                int userStatus = response.code();
+//                user = response.body();
+////                Log.d("Login", "responseCode: " + userStatus);
+////                Log.d("Login", "Name: " + user.getName());
+////                Log.d("Login", "username: " + user.getUsername());
+////                Log.d("Login", "Password: " + user.getPassword());
+////                Log.d("Login", "Email: " + user.getEmail());
+////                Log.d("Login", "ID: " + user.getId());
+////                Log.d("Login", "TeamID: " + user.getTeamID());
+//
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<User> call, Throwable t) {
+//                Log.d("Login", "OnFailure: " + t.getMessage());
+//            }
+//        });
+//
+//        return;
+//    }
 
     public void login(View view) {
         LoginTokenRequest loginTokenRequest = new LoginTokenRequest();
         loginTokenRequest.setEmail(email);
         loginTokenRequest.setPassword(password);
 
-        generateToken(loginTokenRequest);
-        getUser(loginTokenRequest.getEmail());
+        getTokenAndUser(loginTokenRequest);
 
     }
 
-    public void startCreateNewUserActivity(View view){
-        startActivity(new Intent(getBaseContext(), CreateNewUserActivity.class));
+    public void startEnterEmailActivity(View view) {
+        startActivity(new Intent(getBaseContext(), EnterEmailActivity.class));
     }
 
     public void addPerson(View view) {
 
-        new PersonActivity.AddPersonTask(true).execute(personGroupId);
+        new AddPersonTask(true).execute(personGroupId);
 //        addPerson();
 
     }
@@ -255,43 +248,46 @@ public class LoginActivity extends AppCompatActivity {
     private void addPerson() {
 
 
-        Intent intent = new Intent(this, PersonActivity.class);
-        intent.putExtra("AddNewPerson", true);
-        intent.putExtra("PersonName", "");
-        intent.putExtra("PersonGroupId", personGroupId);
-        startActivity(intent);
+//        Intent intent = new Intent(this, PersonActivity.class);
+//        intent.putExtra("AddNewPerson", true);
+//        intent.putExtra("PersonName", "");
+//        intent.putExtra("PersonGroupId", personGroupId);
+//        startActivity(intent);
     }
 
 
-class AddPersonTask extends AsyncTask<String, String, String> {
-    // Indicate the next step is to add face in this person, or finish editing this person.
-    boolean mAddFace;
+    class AddPersonTask extends AsyncTask<String, String, String> {
+        // Indicate the next step is to add face in this person, or finish editing this person.
+        boolean mAddFace;
 
-    AddPersonTask (boolean addFace) {
-        mAddFace = addFace;
-    }
-
-    @Override
-    protected String doInBackground(String... params) {
-        // Get an instance of face service client.
-        FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
-        try{
-            publishProgress("Syncing with server to add person...");
-            addLog("Request: Creating Person in person group" + params[0]);
-
-            // Start the request to creating person.
-            CreatePersonResult createPersonResult = faceServiceClient.createPerson(
-                    params[0],
-                    "THIS IS A TEST",
-                    "I DONT KNOW WHAT SHOULD BE HERE");
-
-            return createPersonResult.personId.toString();
-        } catch (Exception e) {
-            publishProgress(e.getMessage());
-            addLog(e.getMessage());
-            return null;
+        AddPersonTask(boolean addFace) {
+            Log.d("DEBUG1", "addFace(boolean addFace");
+            Log.d("DEBUG1", "addFace" + addFace);
+            mAddFace = addFace;
         }
-    }
+
+        @Override
+        protected String doInBackground(String... params) {
+            // Get an instance of face service client.
+            Log.d("DEBUG1", "doInBackground");
+            FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
+            try {
+                publishProgress("Syncing with server to add person...");
+                addLog("Request: Creating Person in person group" + params[0]);
+
+                // Start the request to creating person.
+                CreatePersonResult createPersonResult = faceServiceClient.createPerson(
+                        params[0],
+                        "Person name",
+                        "User data");
+                Log.d("DEBUG1", "params[0]: " + params[0]);
+                return createPersonResult.personId.toString();
+            } catch (Exception e) {
+                publishProgress(e.getMessage());
+                addLog(e.getMessage());
+                return null;
+            }
+        }
 //
 //    @Override
 //    protected void onPreExecute() {
@@ -303,51 +299,60 @@ class AddPersonTask extends AsyncTask<String, String, String> {
 //        setUiDuringBackgroundTask(progress[0]);
 //    }
 
-    @Override
-    protected void onPostExecute(String result) {
-        progressDialog.dismiss();
+        @Override
+        protected void onPostExecute(String result) {
+//        progressDialog.dismiss();
 
-        if (result != null) {
-            addLog("Response: Success. Person " + result + " created.");
-            personId = result;
-            setInfo("Successfully Synchronized!");
+            if (result != null) {
+                addLog("Response: Success. Person " + result + " created.");
+                personId = result;
+//                setInfo("Successfully Synchronized!");
 
-            if (mAddFace) {
-                addFace();
-            } else {
-                doneAndSave();
+                if (mAddFace) {
+                    addFace();
+                } else {
+                    Log.d("DEBUG1", "postExecute done and save");
+                    doneAndSave();
+                }
             }
         }
     }
-}
+
     // Add a log item.
     private void addLog(String log) {
         LogHelper.addIdentificationLog(log);
     }
 
-    // Set the information panel on screen.
-    private void setInfo(String info) {
-        TextView textView = (TextView) findViewById(R.id.info);
-        textView.setText(info);
-    }
+//    // Set the information panel on screen.
+//    private void setInfo(String info) {
+//        TextView textView = (TextView) findViewById(R.id.info);
+//        textView.setText(info);
+//    }
 
     private void addFace() {
-        setInfo("");
+
+        Log.d("DEBUG1", "addFace");
+//        setInfo("");
         Intent intent = new Intent(this, SelectImageActivity.class);
         startActivityForResult(intent, REQUEST_SELECT_IMAGE);
     }
+
     private void doneAndSave() {
-        TextView textWarning = (TextView)findViewById(R.id.info);
-        EditText editTextPersonName = (EditText)findViewById(R.id.edit_person_name);
-        String newPersonName = editTextPersonName.getText().toString();
-        if (newPersonName.equals("")) {
-            textWarning.setText(R.string.person_name_empty_warning_message);
-            return;
-        }
+        Log.d("DEBUG1", "doneAndSave");
+//        TextView textWarning = (TextView) findViewById(R.id.info);
+//        EditText editTextPersonName = (EditText) findViewById(R.id.edit_person_name);
+//        String newPersonName = editTextPersonName.getText().toString();
+//        if (newPersonName.equals("")) {
+//            textWarning.setText(R.string.person_name_empty_warning_message);
+//            return;
+//        }
 
-//        StorageHelper.setPersonName(personId, newPersonName, personGroupId, PersonActivity.this);
-
+        StorageHelper.setPersonName(personId, email, personGroupId, LoginActivity.this);
         finish();
+    }
+
+    public void startTestActivity(View view) {
+        startActivity(new Intent(getBaseContext(), TestActivity.class));
     }
 }
 

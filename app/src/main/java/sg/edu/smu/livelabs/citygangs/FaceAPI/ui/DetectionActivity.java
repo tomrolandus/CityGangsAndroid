@@ -54,9 +54,7 @@ import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.log.DetectionLogActivity;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
 import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
 
@@ -284,7 +282,7 @@ public class DetectionActivity extends AppCompatActivity {
 
     // Set whether the buttons are enabled.
     private void setAllButtonsEnabledStatus(boolean isEnabled) {
-        Button selectImageButton = (Button) findViewById(R.id.select_image);
+        Button selectImageButton = (Button) findViewById(R.id.btnShoot);
         selectImageButton.setEnabled(isEnabled);
 
         Button detectButton = (Button) findViewById(R.id.detect);

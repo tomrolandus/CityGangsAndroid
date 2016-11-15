@@ -44,13 +44,13 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Enter Email"
         android:ems="10"
         android:layout_marginTop="11dp"
         android:id="@+id/enterEmail"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="email@example.com"
+        android:inputType="textEmailAddress" />
 
     <Button
         android:text="Create a new User"
@@ -59,7 +59,7 @@
         android:layout_above="@+id/AutoLogin"
         android:layout_alignEnd="@+id/AutoLogin"
         android:id="@+id/btnNewUser"
-        android:onClick="startCreateNewUserActivity" />
+        android:onClick="startEnterEmailActivity" />
 
     <Button
         android:text="Add person to FaceAPI"
@@ -71,5 +71,16 @@
         android:layout_marginBottom="38dp"
         android:id="@+id/addPersonBtn"
         android:onClick="addPerson" />
+
+    <Button
+        android:text="test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addPersonBtn"
+        android:layout_alignEnd="@+id/enterPassword"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="44dp"
+        android:id="@+id/test"
+        android:onClick="startTestActivity" />
 
 </RelativeLayout>

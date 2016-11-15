@@ -39,7 +39,7 @@
                     android:text="@string/image" />
 
                 <Button
-                    android:id="@+id/select_image"
+                    android:id="@+id/btnShoot"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"

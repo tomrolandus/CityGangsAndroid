@@ -33,6 +33,10 @@ public interface ServerInterface {
     @GET("user/{email}")
     Call<User> getUser(@Path("email") String email, @Header("Authorization") String authorization);
 
+    @Headers("Accept: application/json")
+    @GET("users/face/{face_id}")
+    Call<User> getUserByFaceId(@Path("face_id") String faceId, @Header("Authorization") String authorization);
+
 
 
     //    @Headers({"Accept: application/json",

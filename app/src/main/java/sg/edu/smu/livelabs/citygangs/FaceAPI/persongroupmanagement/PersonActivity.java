@@ -40,6 +40,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -78,13 +79,14 @@ public class PersonActivity extends AppCompatActivity {
     class AddPersonTask extends AsyncTask<String, String, String> {
         // Indicate the next step is to add face in this person, or finish editing this person.
         boolean mAddFace;
-
         AddPersonTask (boolean addFace) {
             mAddFace = addFace;
         }
 
         @Override
         protected String doInBackground(String... params) {
+            Log.d("DEBUG2","doInBackground");
+            Log.d("DEBUG2","mAddFace= " +mAddFace);
             // Get an instance of face service client.
             FaceServiceClient faceServiceClient = MainActivity.getFaceServiceClient();
             try{
@@ -96,7 +98,10 @@ public class PersonActivity extends AppCompatActivity {
                         params[0],
                         getString(R.string.user_provided_person_name),
                         getString(R.string.user_provided_description_data));
-
+                Log.d("DEBUG2","params[0]= " +params[0]);
+                Log.d("DEBUG2","getString(R.string.user_provided_person_name)= " +getString(R.string.user_provided_person_name));
+                Log.d("DEBUG2","getString(R.string.user_provided_description_data)= "+getString(R.string.user_provided_description_data));
+                Log.d("DEBUG2","createPersonResult.personId.toString()= " +createPersonResult.personId.toString());
                 return createPersonResult.personId.toString();
             } catch (Exception e) {
                 publishProgress(e.getMessage());
@@ -107,16 +112,19 @@ public class PersonActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
+            Log.d("DEBUG2","onPreExecute");
             setUiBeforeBackgroundTask();
         }
 
         @Override
         protected void onProgressUpdate(String... progress) {
+            Log.d("DEBUG2","onProgressUpdate");
             setUiDuringBackgroundTask(progress[0]);
         }
 
         @Override
         protected void onPostExecute(String result) {
+            Log.d("DEBUG2","onPostExecute: " +result);
             progressDialog.dismiss();
 
             if (result != null) {
@@ -125,6 +133,7 @@ public class PersonActivity extends AppCompatActivity {
                 setInfo("Successfully Synchronized!");
 
                 if (mAddFace) {
+                    Log.d("DEBUG2","if(mAddFace");
                     addFace();
                 } else {
                     doneAndSave();
@@ -350,6 +359,7 @@ public class PersonActivity extends AppCompatActivity {
     }
 
     private void addFace() {
+        Log.d("DEBUG2","addFace()");
         setInfo("");
         Intent intent = new Intent(this, SelectImageActivity.class);
         startActivityForResult(intent, REQUEST_SELECT_IMAGE);
@@ -357,9 +367,11 @@ public class PersonActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d("DEBUG2","onActivityResult(...): "+requestCode);
         switch (requestCode)
         {
             case REQUEST_SELECT_IMAGE:
+                Log.d("DEBUG2", "REQUEST_SELECT_IMAGE");
                 if (resultCode == RESULT_OK) {
                     Uri uriImagePicked = data.getData();
                     Intent intent = new Intent(this, AddFaceToPersonActivity.class);

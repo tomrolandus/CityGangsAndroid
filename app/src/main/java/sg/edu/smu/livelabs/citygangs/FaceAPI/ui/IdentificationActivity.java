@@ -55,14 +55,18 @@ import com.microsoft.projectoxford.face.FaceServiceClient;
 import com.microsoft.projectoxford.face.contract.Face;
 import com.microsoft.projectoxford.face.contract.IdentifyResult;
 import com.microsoft.projectoxford.face.contract.TrainingStatus;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.ImageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.LogHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.helper.StorageHelper;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.log.IdentificationLogActivity;
 import sg.edu.smu.livelabs.citygangs.FaceAPI.persongroupmanagement.PersonGroupListActivity;
-import sg.edu.smu.livelabs.citygangs.FaceAPI.ui.FaceRecogActivity;
 import sg.edu.smu.livelabs.citygangs.MainActivity;
 import sg.edu.smu.livelabs.citygangs.R;
+import sg.edu.smu.livelabs.citygangs.User;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -185,7 +189,7 @@ public class IdentificationActivity extends AppCompatActivity {
     }
 
     void setPersonGroupSelected(int position) {
-        TextView textView = (TextView) findViewById(R.id.text_person_group_selected);
+        TextView textView = (TextView) findViewById(R.id.personKilledTV);
         if (position > 0) {
             String personGroupIdSelected = mPersonGroupListAdapter.personGroupIdList.get(position);
             mPersonGroupListAdapter.personGroupIdList.set(
@@ -417,7 +421,7 @@ public class IdentificationActivity extends AppCompatActivity {
         Button selectImageButton = (Button) findViewById(R.id.manage_person_groups);
         selectImageButton.setEnabled(isEnabled);
 
-        Button groupButton = (Button) findViewById(R.id.select_image);
+        Button groupButton = (Button) findViewById(R.id.btnShoot);
         groupButton.setEnabled(isEnabled);
 
         Button identifyButton = (Button) findViewById(R.id.identify);
@@ -519,17 +523,9 @@ public class IdentificationActivity extends AppCompatActivity {
 
             if (mIdentifyResults.size() == faces.size()) {
                 // Show the face details.
-                DecimalFormat formatter = new DecimalFormat("#0.00");
+
                 if (mIdentifyResults.get(position).candidates.size() > 0) {
-                    String personId =
-                            mIdentifyResults.get(position).candidates.get(0).personId.toString();
-                    String personName = StorageHelper.getPersonName(
-                            personId, mPersonGroupId, IdentificationActivity.this);
-                    String identity = "Person: " + personName + "\n"
-                            + "Confidence: " + formatter.format(
-                            mIdentifyResults.get(position).candidates.get(0).confidence);
-                    ((TextView) convertView.findViewById(R.id.text_detected_face)).setText(
-                            identity);
+                  doThisFirst(position, convertView, parent);
                 } else {
                     ((TextView) convertView.findViewById(R.id.text_detected_face)).setText(
                             R.string.face_cannot_be_identified);
@@ -537,6 +533,36 @@ public class IdentificationActivity extends AppCompatActivity {
             }
 
             return convertView;
+        }
+
+        public void doThisFirst(final int position, final View convertView, ViewGroup parent){
+            Call<User> userCall = MainActivity.getService().getUserByFaceId(mIdentifyResults.get(position).candidates.get(0).personId.toString(), "Bearer " +User.getUser().getToken());
+            userCall.enqueue(new Callback<User>() {
+                @Override
+                public void onResponse(Call<User> call, Response<User> response) {
+
+            DecimalFormat formatter = new DecimalFormat("#0.00");
+            String personId =
+                    mIdentifyResults.get(position).candidates.get(0).personId.toString();
+            String personName = StorageHelper.getPersonName(
+                    personId, mPersonGroupId, IdentificationActivity.this);
+            String identity = "Person: " + personName + "\n"
+                    + "Confidence: " + formatter.format(
+                    mIdentifyResults.get(position).candidates.get(0).confidence);
+                    setIdentity(identity, convertView);
+
+                }
+
+                @Override
+                public void onFailure(Call<User> call, Throwable t) {
+
+                }
+            });
+        }
+
+        public void setIdentity(String identity, View convertView){
+            ((TextView) convertView.findViewById(R.id.text_detected_face)).setText(
+                    identity);
         }
     }
 
